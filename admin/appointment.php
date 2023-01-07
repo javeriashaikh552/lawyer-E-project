@@ -108,7 +108,6 @@ $conn = mysqli_connect("localhost","root","","law");
                                             <th>Client Name</th>
                                             <th>Email</th>
                                             <th>Date</th>
-                                            <!-- <th>Service</th> -->
                                             <th>Time</th>
                                             <th>Service</th>
 
@@ -145,11 +144,10 @@ $conn = mysqli_connect("localhost","root","","law");
                     <td><?= $row['name'] ?></td>
                     <td><?= $row['email'] ?></td>
                     <td><?= $row['Date'] ?></td>
-                   
-                    <td><?= $row['Time'] ?></td>
+                   <td><?= $row['Time'] ?></td>
                     <td><?= $row['Service'] ?></td>
                   
-                    <td><img src="images/<?= $row['image'] ?>" width="100px" height="100px" alt=""></td>
+                    <!-- <td><img src="images/<?= $row['image'] ?>" width="100px" height="100px" alt=""></td> -->
                     <!-- <td> <a  href ="testmonialedit.php?id= class="btn btn-success">Edit</a></td>  -->
                     <td> <a  href ="appointmentremove.php?id=<?=$row['id']?>" class="btn btn-danger">Delete</a></td> 
                 </tr>

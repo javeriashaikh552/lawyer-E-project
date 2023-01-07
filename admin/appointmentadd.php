@@ -122,18 +122,17 @@
                 <input type="Date" name ="Date" class="form-control" id="colFormLabel" placeholder="Enter your Date">
                </div>
                <br>
-
-               
-               <!-- client fax no -->
-               <div class="form-group">
-                <label for="colFormLabel">Service</label>
-                <input type="text" name ="Service" class="form-control" id="colFormLabel" placeholder="Enter Service">
-               </div>
-               <br>
+              
                <!-- client phone no -->
                <div class="form-group">
                 <label for="colFormLabel">Time</label>
                 <input type="Time" name ="Time" class="form-control" id="colFormLabel" placeholder="Enter Time">
+               </div>
+               <br>
+                <!-- client fax no -->
+                <div class="form-group">
+                <label for="colFormLabel">Service</label>
+                <input type="text" name ="Service" class="form-control" id="colFormLabel" placeholder="Enter Service">
                </div>
                <br>
                <!-- client password -->
