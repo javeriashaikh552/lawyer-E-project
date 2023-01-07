@@ -48,7 +48,7 @@
 
   // Disabled and read-only inputs
   //
-  // HTML5 says that controls under a fieldset > legend:first-child won't be
+  // php5 says that controls under a fieldset > legend:first-child won't be
   // disabled if the fieldset is disabled. Due to implementation difficulty, we
   // don't honor that edge case; we style them as disabled anyway.
   &:disabled,
@@ -270,7 +270,7 @@ textarea.form-control {
 // viewports reach <768px.
 //
 // Requires wrapping inputs and labels with `.form-group` for proper display of
-// default HTML form controls and our custom form controls (e.g., input groups).
+// default php form controls and our custom form controls (e.g., input groups).
 
 .form-inline {
   display: flex;

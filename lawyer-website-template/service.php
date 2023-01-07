@@ -1,12 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE php>
+<php lang="en">
 
 <head>
     <meta charset="utf-8">
     <title>JUSTICE - Free Lawyer Website Template</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
+    <meta content="Free php Templates" name="keywords">
+    <meta content="Free php Templates" name="description">
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -32,7 +32,7 @@
         <div class="row">
             <div class="col-lg-3 bg-secondary d-none d-lg-block">
                 <a href="index.php" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
-                    <h1 class="m-0 display-4 text-primary text-uppercase">LAWYER</h1>
+                    <h1 class="m-0 display-4 text-primary text-uppercase">Justice</h1>
                 </a>
             </div>
             <div class="col-lg-9">
@@ -78,47 +78,32 @@
                         <div class="navbar-nav mr-auto py-0">
                             <a href="index.php" class="nav-item nav-link">Home</a>
                             <a href="about.php" class="nav-item nav-link">About</a>
-                            <a href="service.php" class="nav-item nav-link">Practice</a>
-                            <a href="team.php" class="nav-item nav-link active">Attorneys</a>
+                            <a href="service.php" class="nav-item nav-link active">Practice</a>
+                            <a href="team.php" class="nav-item nav-link">Attorneys</a>
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Dropdown</a>
                                 <div class="dropdown-menu rounded-0 m-0">
-                                    <a href="#" class="dropdown-item">Menu Item 1</a>
-                                    <a href="#" class="dropdown-item">Menu Item 2</a>
-                                    <a href="#" class="dropdown-item">Menu Item 3</a>
+                                <a href="clientform.php" class="dropdown-item">Client form</a>
+                                    <a href="lawyerform.php" class="dropdown-item">Lawyer form</a>
                                 </div>
                             </div>
                             <a href="contact.php" class="nav-item nav-link">Contact</a>
                         </div>
                         <!-- <a href="" class="btn btn-primary mr-3 d-none d-lg-block">Get A Quote</a> -->
-                        <div class="input-group">
-                            <div id="search-autocomplete" class="form-outline">
-                              <input type="search" id="form1" class="form-control" />
-                              <label class="form-label" for="form1">Search</label>
-                            </div>
-                            <button type="button" class="btn btn-primary">
-                              <i class="fas fa-search"></i>
-                            </button>
-                          </div>
-                          <script>
-                            const basicAutocomplete = document.querySelector('#search-autocomplete');
-const data = ['One', 'Two', 'Three', 'Four', 'Five'];
-const dataFilter = (value) => {
-  return data.filter((item) => {
-    return item.toLowerCase().startsWith(value.toLowerCase());
-  });
-};
-
-new mdb.Autocomplete(basicAutocomplete, {
-  filter: dataFilter
-});
-                          </script>
+                        <label for="exampleDataList" class="form-label"></label>
+<input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search..." style="width:280px;">
+<datalist id="datalistOptions">
+  <option value="San Francisco">
+  <option value="New York">
+  <option value="Seattle">
+  <option value="Los Angeles">
+  <option value="Chicago">
+</datalist>
                     </div>
                 </nav>
             </div>
         </div>
     </div>
-    
     <!-- Header End -->
 
 
@@ -126,11 +111,11 @@ new mdb.Autocomplete(basicAutocomplete, {
     <div class="container-fluid bg-page-header" style="margin-bottom: 90px;">
         <div class="container">
             <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
-                <h3 class="display-3 text-white text-uppercase">Attorney</h3>
+                <h3 class="display-3 text-white text-uppercase">Practice</h3>
                 <div class="d-inline-flex text-white">
                     <p class="m-0 text-uppercase"><a class="text-white" href="">Home</a></p>
                     <i class="fa fa-angle-double-right pt-1 px-3"></i>
-                    <p class="m-0 text-uppercase">Attorney</p>
+                    <p class="m-0 text-uppercase">Practice</p>
                 </div>
             </div>
         </div>
@@ -138,183 +123,131 @@ new mdb.Autocomplete(basicAutocomplete, {
     <!-- Page Header End -->
 
 
-    <!-- Team Start -->
+    <!-- Services Start -->
     <div class="container-fluid py-5">
         <div class="container py-5">
-            <div class="text-center pb-2">
-                <h6 class="text-uppercase">Our Attorneys</h6>
-                <h1 class="mb-4">Meet Our Attorneys</h1>
-            </div>
             <div class="row">
-                <div class="col-12">
+                <div class="col-lg-3">
+                    <h6 class="text-uppercase">Our Practice</h6>
+                    <h1 class="mb-4">Our Practice Areas</h1>
+                    <p>Invidunt lorem justo clita. Erat lorem labore ea, justo dolor lorem ipsum ut sed eos, ipsum et dolor kasd sit ea justo. Erat justo sed sed diam. Ea et erat ut sed diam sea ipsum</p>
+                    <a href="" class="btn btn-primary mt-2">More Services</a>
+                </div>
+                <div class="col-lg-9 pt-5 pt-lg-0">
                     <div class="bg-primary rounded" style="height: 200px;"></div>
-                    <div class="owl-carousel team-carousel position-relative" style="margin-top: -97px; padding: 0 30px;">
-                        <div class="team-item text-center bg-white rounded overflow-hidden pt-4">
-                            <h5 class="mb-2 px-4">Attorney Name</h5>
-                            <p class="mb-3 px-4">Practice Area</p>
-                            <div class="team-img position-relative">
-                                <img class="img-fluid" src="img/team-1.jpg" alt="">
-                                <div class="team-social">
-                                    <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
-                                </div>
+                    <div class="owl-carousel service-carousel position-relative" style="margin-top: -100px; padding: 0 30px;">
+                        <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4">
+                            <div class="icon-box bg-secondary text-primary mt-2 mb-4">
+                                <i class="fa fa-2x fa-landmark"></i>
                             </div>
+                            <h5 class="mb-4 px-4">Civil Law</h5>
+                            <p class="m-0">Takim stet justo elitr sea eirmod vero ipsum. Sed Stet clita sit duo dolor stet at at. Tempor dolor sit ipsum</p>
                         </div>
-                        <div class="team-item text-center bg-white rounded overflow-hidden pt-4">
-                            <h5 class="mb-2 px-4">Attorney Name</h5>
-                            <p class="mb-3 px-4">Practice Area</p>
-                            <div class="team-img position-relative">
-                                <img class="img-fluid" src="img/team-2.jpg" alt="">
-                                <div class="team-social">
-                                    <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
-                                </div>
+                        <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4">
+                            <div class="icon-box bg-secondary text-primary mt-2 mb-4">
+                                <i class="fa fa-2x fa-users"></i>
                             </div>
+                            <h5 class="mb-4 px-4">Family Law</h5>
+                            <p class="m-0">Takim stet justo elitr sea eirmod vero ipsum. Sed Stet clita sit duo dolor stet at at. Tempor dolor sit ipsum</p>
                         </div>
-                        <div class="team-item text-center bg-white rounded overflow-hidden pt-4">
-                            <h5 class="mb-2 px-4">Attorney Name</h5>
-                            <p class="mb-3 px-4">Practice Area</p>
-                            <div class="team-img position-relative">
-                                <img class="img-fluid" src="img/team-3.jpg" alt="">
-                                <div class="team-social">
-                                    <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
-                                </div>
+                        <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4">
+                            <div class="icon-box bg-secondary text-primary mt-2 mb-4">
+                                <i class="fa fa-2x fa-hand-holding-usd"></i>
                             </div>
+                            <h5 class="mb-4 px-4">Business Law</h5>
+                            <p class="m-0">Takim stet justo elitr sea eirmod vero ipsum. Sed Stet clita sit duo dolor stet at at. Tempor dolor sit ipsum</p>
                         </div>
-                        <div class="team-item text-center bg-white rounded overflow-hidden pt-4">
-                            <h5 class="mb-2 px-4">Attorney Name</h5>
-                            <p class="mb-3 px-4">Practice Area</p>
-                            <div class="team-img position-relative">
-                                <img class="img-fluid" src="img/team-4.jpg" alt="">
-                                <div class="team-social">
-                                    <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
-                                </div>
+                        <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4">
+                            <div class="icon-box bg-secondary text-primary mt-2 mb-4">
+                                <i class="fa fa-2x fa-gavel"></i>
                             </div>
-                        </div>
-                        <div class="team-item text-center bg-white rounded overflow-hidden pt-4">
-                            <h5 class="mb-2 px-4">Attorney Name</h5>
-                            <p class="mb-3 px-4">Practice Area</p>
-                            <div class="team-img position-relative">
-                                <img class="img-fluid" src="img/team-5.jpg" alt="">
-                                <div class="team-social">
-                                    <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
+                            <h5 class="mb-4 px-4">Criminal Law</h5>
+                            <p class="m-0">Takim stet justo elitr sea eirmod vero ipsum. Sed Stet clita sit duo dolor stet at at. Tempor dolor sit ipsum</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Team End -->
+    <!-- Services End -->
 
 
-    <!-- Appointment Start -->
+    <!-- Action Start -->
     <div class="container-fluid py-5">
         <div class="container py-5">
-            <div class="bg-appointment rounded">
+            <div class="bg-action rounded" style="height: 500px;">
                 <div class="row h-100 align-items-center justify-content-center">
-                    <div class="col-lg-6 py-5">
-                        <div class="rounded p-5 my-5" style="background: rgba(55, 55, 63, .7);">
-                            <h1 class="text-center text-white mb-4">Get An Appointment</h1>
-                            <form>
-                                <div class="form-group">
-                                    <input type="text" class="form-control border-0 p-4" placeholder="Your Name" required="required" />
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" class="form-control border-0 p-4" placeholder="Your Email" required="required" />
-                                </div>
-                                <div class="form-row">
-                                    <div class="col-6">
-                                        <div class="form-group">
-                                            <div class="date" id="date" data-target-input="nearest">
-                                                <input type="text" class="form-control border-0 p-4 datetimepicker-input" placeholder="Select Date" data-target="#date" data-toggle="datetimepicker"/>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="form-group">
-                                            <div class="time" id="time" data-target-input="nearest">
-                                                <input type="text" class="form-control border-0 p-4 datetimepicker-input" placeholder="Select Time" data-target="#time" data-toggle="datetimepicker"/>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <select class="custom-select border-0 px-4" style="height: 47px;">
-                                        <option selected>Select A Service</option>
-                                        <option value="1">Service 1</option>
-                                        <option value="2">Service 1</option>
-                                        <option value="3">Service 1</option>
-                                    </select>
-                                </div>
-                                <div>
-                                    <button class="btn btn-primary btn-block border-0 py-3" type="submit">Get An Appointment</button>
-                                </div>
-                            </form>
-                        </div>
+                    <div class="col-lg-7 text-center">
+                        <h1 class="text-white mb-4">Let's get started. Call us now for a Free Consultation</h1>
+                        <a class="btn btn-primary py-3 px-5 mt-2" href="#">Call Us Now</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Appointment End -->
+    <!-- Action End -->
 
 
-    <!-- Features Start -->
+    <!-- Testimonial Start -->
     <div class="container-fluid py-5">
         <div class="container py-5">
-            <div class="row">
-                <div class="col-lg-6" style="min-height: 500px;">
-                    <div class="position-relative h-100 rounded overflow-hidden">
-                        <img class="position-absolute w-100 h-100" src="img/feature.jpg" style="object-fit: cover;">
+            <div class="text-center pb-5">
+                <h6 class="text-uppercase">Testimonial</h6>
+                <h1 class="mb-5">What Our Clients Say</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel">
+                <div class="testimonial-item">
+                    <div class="testimonial-text position-relative bg-secondary text-light rounded p-5 mb-4">
+                        Sed ea amet kasd elitr stet nonumy, stet rebum et ipsum est duo elitr clita lorem
+                    </div>
+                    <div class="d-flex align-items-center pt-3">
+                        <img class="img-fluid rounded-circle" src="img/testimonial-1.jpg" style="width: 80px; height: 80px;" alt="">
+                        <div class="pl-4">
+                            <h5>Client Name</h5>
+                            <p class="m-0">Profession</p>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-6 pt-5 pb-lg-5">
-                    <div class="feature-text bg-white rounded p-lg-5">
-                        <h6 class="text-uppercase">Our Features</h6>
-                        <h1 class="mb-4">Why Choose Us</h1>
-                        <div class="d-flex mb-4">
-                            <div class="btn-primary btn-lg-square px-3" style="border-radius: 50px;">
-                                <h5 class="text-secondary m-0">01</h5>
-                            </div>
-                            <div class="ml-4">
-                                <h5>Best Law Practices</h5>
-                                <p class="m-0">Ipsum duo tempor elitr rebum stet magna amet kasd. Ipsum magna ipsum ipsum stet ipsum</p>
-                            </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-text position-relative bg-secondary text-light rounded p-5 mb-4">
+                        Sed ea amet kasd elitr stet nonumy, stet rebum et ipsum est duo elitr clita lorem
+                    </div>
+                    <div class="d-flex align-items-center pt-3">
+                        <img class="img-fluid rounded-circle" src="img/testimonial-2.jpg" style="width: 80px; height: 80px;" alt="">
+                        <div class="pl-4">
+                            <h5>Client Name</h5>
+                            <p class="m-0">Profession</p>
                         </div>
-                        <div class="d-flex mb-4">
-                            <div class="btn-primary btn-lg-square px-3" style="border-radius: 50px;">
-                                <h5 class="text-secondary m-0">02</h5>
-                            </div>
-                            <div class="ml-4">
-                                <h5>Efficiency & Trust</h5>
-                                <p class="m-0">Ipsum duo tempor elitr rebum stet magna amet kasd. Ipsum magna ipsum ipsum stet ipsum</p>
-                            </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-text position-relative bg-secondary text-light rounded p-5 mb-4">
+                        Sed ea amet kasd elitr stet nonumy, stet rebum et ipsum est duo elitr clita lorem
+                    </div>
+                    <div class="d-flex align-items-center pt-3">
+                        <img class="img-fluid rounded-circle" src="img/testimonial-3.jpg" style="width: 80px; height: 80px;" alt="">
+                        <div class="pl-4">
+                            <h5>Client Name</h5>
+                            <p class="m-0">Profession</p>
                         </div>
-                        <div class="d-flex">
-                            <div class="btn-primary btn-lg-square px-3" style="border-radius: 50px;">
-                                <h5 class="text-secondary m-0">03</h5>
-                            </div>
-                            <div class="ml-4">
-                                <h5>Results You Deserve</h5>
-                                <p class="m-0">Ipsum duo tempor elitr rebum stet magna amet kasd. Ipsum magna ipsum ipsum stet ipsum</p>
-                            </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-text position-relative bg-secondary text-light rounded p-5 mb-4">
+                        Sed ea amet kasd elitr stet nonumy, stet rebum et ipsum est duo elitr clita lorem
+                    </div>
+                    <div class="d-flex align-items-center pt-3">
+                        <img class="img-fluid rounded-circle" src="img/testimonial-4.jpg" style="width: 80px; height: 80px;" alt="">
+                        <div class="pl-4">
+                            <h5>Client Name</h5>
+                            <p class="m-0">Profession</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Features End -->
+    <!-- Testimonial End -->
 
 
     <!-- Footer Start -->
@@ -399,7 +332,7 @@ new mdb.Autocomplete(basicAutocomplete, {
                 <p class="m-0 text-white">&copy; <a class="font-weight-bold" href="#">Your Site Name</a>. All Rights Reserved.</p>
             </div>
             <div class="col-md-6 text-center text-md-right">
-                <p class="m-0 text-white">Designed by <a class="font-weight-bold" href="https://htmlcodex.com">HTML Codex</a></p>
+                <p class="m-0 text-white">Designed by <a class="font-weight-bold" href="https://phpcodex.com">php Codex</a></p>
             </div>
         </div>
     </div>
@@ -428,9 +361,4 @@ new mdb.Autocomplete(basicAutocomplete, {
     <script src="js/main.js"></script>
 </body>
 
-</html>
-
-
-<script>
-
-</script>
+</php>

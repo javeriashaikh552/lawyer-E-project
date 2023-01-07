@@ -1,12 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE php>
+<php lang="en">
 
 <head>
     <meta charset="utf-8">
     <title>JUSTICE - Free Lawyer Website Template</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
+    <meta content="Free php Templates" name="keywords">
+    <meta content="Free php Templates" name="description">
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -83,18 +83,26 @@
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Dropdown</a>
                                 <div class="dropdown-menu rounded-0 m-0">
-                                    <a href="#" class="dropdown-item">Menu Item 1</a>
-                                    <a href="#" class="dropdown-item">Menu Item 2</a>
-                                    <a href="#" class="dropdown-item">Menu Item 3</a>
+                                <a href="clientform.php" class="dropdown-item">Client form</a>
+                                    <a href="lawyerform.php" class="dropdown-item">Lawyer form</a>
                                 </div>
                             </div>
                             <a href="contact.php" class="nav-item nav-link">Contact</a>
                         </div>
                         <!-- <a href="" class="btn btn-primary mr-3 d-none d-lg-block">Get A Quote</a> -->
-                        <form action="/action_page.php">
+                        <!-- <form action="/action_page.php">
                             <input type="text" placeholder="Search.." name="search">
                             <button type="submit"><i class="fa fa-search"></i></button>
-                          </form>
+                          </form> -->
+                          <label for="exampleDataList" class="form-label"></label>
+<input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search..." style="width:280px;">
+<datalist id="datalistOptions">
+  <option value="San Francisco">
+  <option value="New York">
+  <option value="Seattle">
+  <option value="Los Angeles">
+  <option value="Chicago">
+</datalist>
                     </div>
                 </nav>
             </div>
@@ -158,7 +166,7 @@
                                     <div class="col-6">
                                         <div class="form-group">
                                             <div class="Date" id="Date" data-target-input="nearest">
-                                                <input type="Date" name ="Date" class="form-control border-0 p-4 datetimepicker-input" placeholder="Select Date" data-target="#Date" data-toggle="datetimepicker"/>
+                                                <input type="Date" name ="txtDate" class="form-control border-0 p-4 datetimepicker-input" placeholder="Select Date" data-target="#Date" data-toggle="datetimepicker"/>
                                             </div>
                                         </div>
                                     </div>
@@ -178,14 +186,11 @@
                                         <option selected>Divorce</option>
                                         <option selected>Criminal</option>
                                     </select>
-                                </div>
-                                <!-- <div class="form-group">
-                                            <div class="image" id="image" data-target-input="nearest">
-                                                <input type="file" name="image" class="form-control border-0 p-4 datetimepicker-input" placeholder="Select image" data-target="#image" data-toggle="datetimepicker"/>
-                                            </div>
-                                        </div>   -->
+                                
+                                
+                                        </div>  
                                         <div>
-                                    <button class="btn btn-primary btn-block border-0 py-3" type="submit">Get An Appointment</button>
+                                    <button class="btn btn-primary btn-block border-0 py-3"href="./login.html" type="submit">Get An Appointment</button>
                                 </div>
                             </form>
                         </div>
@@ -198,21 +203,17 @@
 error_reporting(0);
 $name=$_POST['txtname'];
 $email=$_POST['txtemail'];
-$Date=$_POST['Date'];
+$Date=$_POST['txtDate'];
 $Time=$_POST['txtTime'];
 $Service=$_POST['txtService'];
 
-// $image= $_FILES['image'];
-// $imagename = $image['name'];
-// $tempiamgename = $image['tmp_name'];
 
 $conn = mysqli_connect("localhost","root","","law");
-
 if(!$conn){
     echo "connection refuse";
 }
 
-$query ="INSERT INTO `appointment`(`id`,`name`,`email`,`Date`,`Time`,`Service`) VALUES ('null','$name','$email',$Date,'$Time','$Service')";
+$query ="INSERT INTO `appointment`(`id`,`name`,`email`,`Date`,`Time`,`Service`,`image`) VALUES ('null','$name','$email','$Date','$Time','$Service','$image')";
 
 $q= mysqli_query($conn,$query);
 
@@ -361,7 +362,7 @@ header('location:about.php');
                 <p class="m-0 text-white">&copy; <a class="font-weight-bold" href="#">Your Site Name</a>. All Rights Reserved.</p>
             </div>
             <div class="col-md-6 text-center text-md-right">
-                <p class="m-0 text-white">Designed by <a class="font-weight-bold" href="https://htmlcodex.com">HTML Codex</a></p>
+                <p class="m-0 text-white">Designed by <a class="font-weight-bold" href="https://phpcodex.com">php Codex</a></p>
             </div>
         </div>
     </div>
@@ -390,4 +391,4 @@ header('location:about.php');
     <script src="js/main.js"></script>
 </body>
 
-</html>
+</php>

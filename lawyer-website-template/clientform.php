@@ -1,12 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE php>
+<php lang="en">
 
 <head>
     <meta charset="utf-8">
     <title>JUSTICE - Free Lawyer Website Template</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
+    <meta content="Free php Templates" name="keywords">
+    <meta content="Free php Templates" name="description">
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -32,7 +32,7 @@
         <div class="row">
             <div class="col-lg-3 bg-secondary d-none d-lg-block">
                 <a href="index.php" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
-                    <h1 class="m-0 display-4 text-primary text-uppercase">LAWYER</h1>
+                    <h1 class="m-0 display-4 text-primary text-uppercase">Justice</h1>
                 </a>
             </div>
             <div class="col-lg-9">
@@ -83,18 +83,22 @@
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Dropdown</a>
                                 <div class="dropdown-menu rounded-0 m-0">
-                                    <a href="#" class="dropdown-item">Menu Item 1</a>
-                                    <a href="#" class="dropdown-item">Menu Item 2</a>
-                                    <a href="#" class="dropdown-item">Menu Item 3</a>
+                                <a href="clientform.php" class="dropdown-item">Client form</a>
+                                    <a href="lawyerform.php" class="dropdown-item">Lawyer form</a>
                                 </div>
                             </div>
                             <a href="contact.php" class="nav-item nav-link">Contact</a>
                         </div>
                         <!-- <a href="" class="btn btn-primary mr-3 d-none d-lg-block">Get A Quote</a> -->
-                        <form action="/action_page.php">
-                            <input type="text" placeholder="Search.." name="search">
-                            <button type="submit"><i class="fa fa-search"></i></button>
-                          </form>
+                        <label for="exampleDataList" class="form-label"></label>
+<input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search..." style="width:280px;">
+<datalist id="datalistOptions">
+  <option value="San Francisco">
+  <option value="New York">
+  <option value="Seattle">
+  <option value="Los Angeles">
+  <option value="Chicago">
+</datalist>
                     </div>
                 </nav>
             </div>
@@ -119,70 +123,91 @@
     <!-- Page Header End -->
 
 
-    <!-- Services Start -->
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="row">
-                <div class="col-lg-3">
-                    <h6 class="text-uppercase">Our Practice</h6>
-                    <h1 class="mb-4">Our Practice Areas</h1>
-                    <p>Invidunt lorem justo clita. Erat lorem labore ea, justo dolor lorem ipsum ut sed eos, ipsum et dolor kasd sit ea justo. Erat justo sed sed diam. Ea et erat ut sed diam sea ipsum</p>
-                    <a href="" class="btn btn-primary mt-2">More Services</a>
-                </div>
-                <div class="col-lg-9 pt-5 pt-lg-0">
-                    <div class="bg-primary rounded" style="height: 200px;"></div>
-                    <div class="owl-carousel service-carousel position-relative" style="margin-top: -100px; padding: 0 30px;">
-                        <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4">
-                            <div class="icon-box bg-secondary text-primary mt-2 mb-4">
-                                <i class="fa fa-2x fa-landmark"></i>
+<!-- client from start -->
+
+
+
+
+
+ <!-- Appointment Start -->
+ <div class="container-fluid py-5">
+    <div class="container py-5">
+        <div class="bg-appointment rounded">
+            <div class="row h-100 align-items-center justify-content-center">
+                <div class="col-lg-6 py-9">
+                    <div class="rounded p-5 my-7" style="background: rgba(55, 55, 63, .7);">
+                        <h1 class="text-center text-white mb-4">CLIENT FORM</h1>
+                        <form  action="clientform.php" method="post">
+                            <div class="form-group">
+                                <input type="text"  name ="txtname" class="form-control border-0 p-4" placeholder="Your client Name" required="required" />
                             </div>
-                            <h5 class="mb-4 px-4">Civil Law</h5>
-                            <p class="m-0">Takim stet justo elitr sea eirmod vero ipsum. Sed Stet clita sit duo dolor stet at at. Tempor dolor sit ipsum</p>
-                        </div>
-                        <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4">
-                            <div class="icon-box bg-secondary text-primary mt-2 mb-4">
-                                <i class="fa fa-2x fa-users"></i>
+                            <div class="form-group">
+                                <input type="text" name ="txtcity" class="form-control border-0 p-4" placeholder="Your City" required="required" />
                             </div>
-                            <h5 class="mb-4 px-4">Family Law</h5>
-                            <p class="m-0">Takim stet justo elitr sea eirmod vero ipsum. Sed Stet clita sit duo dolor stet at at. Tempor dolor sit ipsum</p>
-                        </div>
-                        <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4">
-                            <div class="icon-box bg-secondary text-primary mt-2 mb-4">
-                                <i class="fa fa-2x fa-hand-holding-usd"></i>
+                            <div class="form-group">
+                                <input type="text" name ="txtaddress" class="form-control border-0 p-4" placeholder="Your Address" required="required" />
                             </div>
-                            <h5 class="mb-4 px-4">Business Law</h5>
-                            <p class="m-0">Takim stet justo elitr sea eirmod vero ipsum. Sed Stet clita sit duo dolor stet at at. Tempor dolor sit ipsum</p>
-                        </div>
-                        <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4">
-                            <div class="icon-box bg-secondary text-primary mt-2 mb-4">
-                                <i class="fa fa-2x fa-gavel"></i>
+                            <div class="form-group">
+                                <input type="email" name ="txtemail" class="form-control border-0 p-4" placeholder="Your Email" required="required" />
                             </div>
-                            <h5 class="mb-4 px-4">Criminal Law</h5>
-                            <p class="m-0">Takim stet justo elitr sea eirmod vero ipsum. Sed Stet clita sit duo dolor stet at at. Tempor dolor sit ipsum</p>
-                        </div>
+                           
+                            <div class="form-group">
+                                <input type="number" name ="txtphone" class="form-control border-0 p-4" placeholder="Your phone no"  />
+                            </div>
+                      
+                            <div class="form-group">
+                                <input type="text" name ="txtfax" class="form-control border-0 p-4" placeholder="Your fax no" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <input type="password" name ="txtpassword" class="form-control border-0 p-4" placeholder="Your password" required="required" />
+                            </div>
+
+                                <button class="btn btn-primary btn-block border-0 py-3" type="submit">Get An Appointment</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Services End -->
+</div>
 
 
-    <!-- Action Start -->
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="bg-action rounded" style="height: 500px;">
-                <div class="row h-100 align-items-center justify-content-center">
-                    <div class="col-lg-7 text-center">
-                        <h1 class="text-white mb-4">Let's get started. Call us now for a Free Consultation</h1>
-                        <a class="btn btn-primary py-3 px-5 mt-2" href="#">Call Us Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Action End -->
+<?php 
+// error_reporting(0);
+$client = $_POST['client'];
+ $city = $_POST['city'];
+ $address = $_POST['address'];
+ $email = $_POST['email'];
+ $phone = $_POST['phone'];
+ $fax = $_POST['fax'];
+ $password = $_POST['password'];
 
+
+$conn = mysqli_connect("localhost","root","","law");
+if(!$conn){
+    echo "connection refuse";
+}
+$query ="INSERT INTO `client`(`id`, `client`, `city`, `address`, `email`, `phone`, `fax`, `password`) VALUES ('null','$name','$city','$address','$email','$phone','$fax','$password')";
+
+$q= mysqli_query($conn,$query);
+
+
+if(!$q){
+    echo "query not exectired!";
+}
+else{
+    echo "query sucess!";
+
+}
+header('location:clientform.php');
+
+
+?>
+<!-- <script>
+   window.location.assign("about.php");
+</script> -->
+<!-- Appointment End -->
 
     <!-- Testimonial Start -->
     <div class="container-fluid py-5">
@@ -328,7 +353,7 @@
                 <p class="m-0 text-white">&copy; <a class="font-weight-bold" href="#">Your Site Name</a>. All Rights Reserved.</p>
             </div>
             <div class="col-md-6 text-center text-md-right">
-                <p class="m-0 text-white">Designed by <a class="font-weight-bold" href="https://htmlcodex.com">HTML Codex</a></p>
+                <p class="m-0 text-white">Designed by <a class="font-weight-bold" href="https://phpcodex.com">php Codex</a></p>
             </div>
         </div>
     </div>
@@ -357,4 +382,4 @@
     <script src="js/main.js"></script>
 </body>
 
-</html>
+</php>

@@ -1,12 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE php>
+<php lang="en">
 
 <head>
     <meta charset="utf-8">
     <title>JUSTICE - Free Lawyer Website Template</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
+    <meta content="Free php Templates" name="keywords">
+    <meta content="Free php Templates" name="description">
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -24,9 +24,6 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-
-
-   
 </head>
 
 <body>
@@ -35,7 +32,7 @@
         <div class="row">
             <div class="col-lg-3 bg-secondary d-none d-lg-block">
                 <a href="index.php" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
-                    <h1 class="m-0 display-4 text-primary text-uppercase">LAWYER</h1>
+                    <h1 class="m-0 display-4 text-primary text-uppercase">Lawyer</h1>
                 </a>
             </div>
             <div class="col-lg-9">
@@ -80,27 +77,16 @@
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto py-0">
                             <a href="index.php" class="nav-item nav-link active">Home</a>
-                            <a href="about.php" class="nav-item nav-link">About</a>
-                            <a href="service.php" class="nav-item nav-link">Practice</a>
                             <a href="team.php" class="nav-item nav-link">Attorneys</a>
-                            <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Dropdown</a>
-                                <div class="dropdown-menu rounded-0 m-0">
-                                    <a href="#" class="dropdown-item">Menu Item 1</a>
-                                    <a href="#" class="dropdown-item">Menu Item 2</a>
-                                    <a href="#" class="dropdown-item">Menu Item 3</a>
-                                </div>
-                            </div>
+                            <a href="" class="nav-item nav-link">Services</a>
+                            <a href="service.php" class="nav-item nav-link">Appointment</a>
+                            <a href="about.php" class="nav-item nav-link">About</a>
                             <a href="contact.php" class="nav-item nav-link">Contact</a>
+                            <a href="lawyerform.php" class="nav-item nav-link">Register</a>
+                            <a href="loginpage.php" class="nav-item nav-link">Login</a>
                         </div>
-                        <!-- <a href="" class="btn btn-primary mr-3 d-none d-lg-block">Get A Quote</a> -->
-                        <!-- <form action="/action_page.php">
-                            <input type="text" placeholder="Search.." name="search">
-                            <button type="submit"><i class="fa fa-search"></i></button>
-     
-                          </form> -->
                           <label for="exampleDataList" class="form-label"></label>
-<input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+<input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search..." style="width:280px;">
 <datalist id="datalistOptions">
   <option value="San Francisco">
   <option value="New York">
@@ -167,7 +153,7 @@
                     <h2 class="position-relative text-center bg-white text-primary rounded p-3 mt-4 mb-4 d-none d-lg-block" style="width: 350px; margin-left: -205px;">25 Years Experience</h2>
                     <h6 class="text-uppercase">Learn About Us</h6>
                     <h1 class="mb-4">We Provide Reliable And Effective Legal Services</h1>
-                    <p>Invidunt lorem justo sanctus clita. Erat lorem labore ea, justo dolor lorem ipsum ut sed eos, ipsum et dolor kasd sit ea justo. Erat justo sed sed diam. Ea et erat ut sed diam sea ipsum est dolor</p>
+                    <p>Thank you to the whole team at Higher Level Legal Law Firm. They helped me handle my case and get the refiling resolved efficiently. They went above and beyond in every situation making everything easy and streamlined."</p>
                     <a href="" class="btn btn-primary mt-2">Learn More</a>
                 </div>
             </div>
@@ -183,7 +169,7 @@
                 <div class="col-lg-3">
                     <h6 class="text-uppercase">Our Practice</h6>
                     <h1 class="mb-4">Our Practice Areas</h1>
-                    <p>As a lawyer, you need to be an expert in your field in order to successfully navigate the complicated waters of the legal ocean. If you’re an aspiring lawyer just starting on your journey, there are a lot of options.</p>
+                    <p>As a lawyer, you need to be an expert in your field in order to successfully navigate the complicated waters of the legal ocean. If you’re an aspiring lawyer just starting on your journey, there are a lot of options.                    </p>
                     <a href="" class="btn btn-primary mt-2">More Services</a>
                 </div>
                 <div class="col-lg-9 pt-5 pt-lg-0">
@@ -194,29 +180,28 @@
                                 <i class="fa fa-2x fa-landmark"></i>
                             </div>
                             <h5 class="mb-4 px-4">Civil Law</h5>
-                            <p class="m-0">
-                                Civil law deals with behavior that constitutes an injury to an individual or other private party.An important common characteristic of civil law </p>
+                            <p class="m-0"> Civil and corporate law firm offering quality services with special focus on helping clients to achieve their personal & commercial objectives.</p>
                         </div>
                         <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4">
                             <div class="icon-box bg-secondary text-primary mt-2 mb-4">
                                 <i class="fa fa-2x fa-users"></i>
                             </div>
-                            <h5 class="mb-4 px-4">Affidavit Law</h5>
-                            <p class="m-0">affidavit contains a verification, which means that it is made under oath on penalty of perjury, a commencement which identifies the affiant;</p>
+                            <h5 class="mb-4 px-4">Family Law</h5>
+                            <p class="m-0">When it's time to go your separate ways, even if you agree on everything, you should have an attorney represent your interests to ensure that your rights are not being violated.</p>
                         </div>
                         <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4">
                             <div class="icon-box bg-secondary text-primary mt-2 mb-4">
                                 <i class="fa fa-2x fa-hand-holding-usd"></i>
                             </div>
-                            <h5 class="mb-4 px-4">Divorce Law</h5>
-                            <p class="m-0">No matter whether the marriage has been dissolved through talaq, khula or judicial divorce, it is vital that legal procedures be properly followed.</p>
+                            <h5 class="mb-4 px-4">Business Law</h5>
+                            <p class="m-0">Commercial law or business law is the body of law which governs business and commerce and is often considered to be a branch of civil law and deals both with issues of private law and public law.</p>
                         </div>
                         <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4">
                             <div class="icon-box bg-secondary text-primary mt-2 mb-4">
                                 <i class="fa fa-2x fa-gavel"></i>
                             </div>
                             <h5 class="mb-4 px-4">Criminal Law</h5>
-                            <p class="m-0">law that defines criminal offenses, charging, and trial of suspected persons, and fixes penalties and modes of treatment applicable to convicted offenders.</p>
+                            <p class="m-0">criminal defence attorneys are forced to innovate to stay competitive. This has resulted in some truly unique websites, some of which we share in this article.</p>
                         </div>
                     </div>
                 </div>
@@ -226,82 +211,75 @@
     <!-- Services End -->
 
 
- 
-
- <!-- Appointment Start -->
- <div class="container-fluid py-5">
-    <div class="container py-5">
-        <div class="bg-appointment rounded">
-            <div class="row h-100 align-items-center justify-content-center">
-                <div class="col-lg-6 py-5">
-                    <div class="rounded p-5 my-5" style="background: rgba(55, 55, 63, .7);">
-                        <h1 class="text-center text-white mb-4">client Appointment</h1>
-                        <form>
-                            <div class="form-group">
-                                <input type="text" class="form-control border-0 p-4" placeholder="client Name" required="required" />
-                            </div>
-                            <div class="form-group">
-                                <input type="email" class="form-control border-0 p-4" placeholder="Your Email" required="required" />
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control border-0 p-4" placeholder="Your Address" required="required" />
-                            </div>
-                            <!-- <div class="form-group">
-                                <input type="number" class="form-control border-0 p-4" placeholder="Your phone no"  />
-                            </div> -->
-                            <div class="form-group">
-                                <input type="number" class="form-control border-0 p-4" placeholder="Your mobile no" required="required" />
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control border-0 p-4" placeholder="Your fax no" />
-                            </div>
-                            <div class="form-group">
-                                <input type="password" class="form-control border-0 p-4" placeholder="Your password" required="required" />
-                            </div>
-                            <!-- <div class="form-group">
-                                <input type="password" class="form-control border-0 p-4" placeholder="Your confirm password" required="required" />
-                            </div> -->
-
-                            <!-- <div class="form-row">
-                                <div class="col-6">
-                                    <div class="form-group">
-                                        <div class="date" id="date" data-target-input="nearest">
-                                            <input type="text" class="form-control border-0 p-4 datetimepicker-input" placeholder="Select Date" data-target="#date" data-toggle="datetimepicker"/>
+    <!-- Appointment Start -->
+    <!-- <div class="container-fluid py-5"> -->
+        <!-- <div class="container py-5">
+            <div class="bg-appointment rounded">
+                <div class="row h-100 align-items-center justify-content-center">
+                    <div class="col-lg-6 py-5">
+                        <div class="rounded p-5 my-5" style="background: rgba(55, 55, 63, .7);">
+                            <h1 class="text-center text-white mb-4">Get An Appointment</h1>
+                            <form>
+                                <div class="form-group">
+                                    <input type="text" class="form-control border-0 p-4" placeholder="Your Name" required="required" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control border-0 p-4" placeholder="Your Email" required="required" />
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <div class="date" id="date" data-target-input="nearest">
+                                                <input type="text" class="form-control border-0 p-4 datetimepicker-input" placeholder="Select Date" data-target="#date" data-toggle="datetimepicker"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <div class="time" id="time" data-target-input="nearest">
+                                                <input type="text" class="form-control border-0 p-4 datetimepicker-input" placeholder="Select Time" data-target="#time" data-toggle="datetimepicker"/>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-6">
-                                    <div class="form-group">
-                                        <div class="time" id="time" data-target-input="nearest">
-                                            <input type="text" class="form-control border-0 p-4 datetimepicker-input" placeholder="Select Time" data-target="#time" data-toggle="datetimepicker"/>
-                                        </div>
-                                    </div>
+                                <div class="form-group">
+                                    <select class="custom-select border-0 px-4" style="height: 47px;">
+                                        <option selected>Select A Service</option>
+                                        <option value="1">Service 1</option>
+                                        <option value="2">Service 1</option>
+                                        <option value="3">Service 1</option>
+                                    </select>
                                 </div>
-                            </div> -->
-                            <div class="form-group">
-                                <select class="custom-select border-0 px-4" required="required"  style="height: 47px;">
-                                    <option selected>Select A Service</option>
-                                    <option value="1">Criminal</option>
-                                    <option value="2">divorce</option>
-                                    <option value="3">affidavit</option>
-                                    <option value="3">civil</option>
-                                </select>
-                            </div>
-                            <div>
-                                <button class="btn btn-primary btn-block border-0 py-3" type="submit">Get An Appointment</button>
-                            </div>
-                        </form>
+                                <div>
+                                    <button class="btn btn-primary btn-block border-0 py-3" type="submit">Get An Appointment</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- <button class="btn btn-primary btn-block border-0 py-3" type="submit">Get An Appointment</button>
+
+    </div> -->
+
+      <!-- Action Start -->
+      <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="bg-action rounded" style="height: 500px;">
+                <div class="row h-100 align-items-center justify-content-center">
+                    <div class="col-lg-7 text-center">
+                        <h1 class="text-white mb-4">Let's get started. Call us now for a Free Consultation</h1>
+                        <a class="btn btn-primary py-3 px-5 mt-2" href="clientform.php">Client form</a>
+                        <a class="btn btn-primary py-3 px-5 mt-2" href="lawyerform.php">lawyer form</a>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- Appointment End -->
-
-
-
-
+    <!-- Action End -->
+    <!-- Appointment End -->
 
 
     <!-- Features Start -->
@@ -323,7 +301,7 @@
                             </div>
                             <div class="ml-4">
                                 <h5>Best Law Practices</h5>
-                                <p class="m-0">As a lawyer, you need to be an expert in your field in order to successfully navigate the complicated waters of the legal ocean.</p>
+                                <p class="m-0">The staff and customer service are excellent and all the attorneys are top-notch. They truly care about getting the best results for their clients."</p>
                             </div>
                         </div>
                         <div class="d-flex mb-4">
@@ -332,7 +310,7 @@
                             </div>
                             <div class="ml-4">
                                 <h5>Efficiency & Trust</h5>
-                                <p class="m-0">Trust increases productivity and morale, creates a culture of teamwork and respect, and enables effective problem-solving.</p>
+                                <p class="m-0">Higher Level Legal Law Firm. They helped me handle my case and get the refiling resolved efficiently. They went above and beyond in every situation making everything easy and streamlined."</p>
                             </div>
                         </div>
                         <div class="d-flex">
@@ -341,7 +319,7 @@
                             </div>
                             <div class="ml-4">
                                 <h5>Results You Deserve</h5>
-                                <p class="m-0">Commitment, integrity, and results – these three simple words reflect our practice.</p>
+                                <p class="m-0">In the midst of life-altering decisions and legal matters, choosing the right attorney for you is a must.</p>
                             </div>
                         </div>
                     </div>
@@ -380,25 +358,10 @@
                     <div class="bg-primary rounded" style="height: 200px;"></div>
                     <div class="owl-carousel team-carousel position-relative" style="margin-top: -97px; padding: 0 30px;">
                         <div class="team-item text-center bg-white rounded overflow-hidden pt-4">
-                            <h5 class="mb-2 px-4">Anwar Mansoor Khan</h5>
-                            <p class="mb-3 px-4">Senior Advocate, Supreme Court of Pakistan</p>
+                            <h5 class="mb-2 px-4">Attorney Name</h5>
+                            <p class="mb-3 px-4">Practice Area</p>
                             <div class="team-img position-relative">
-                                <img class="img-fluid" src="img/Anwar Mansoor Khan.jpg" alt="">
-                                <br>
-                                <br>
-                                <div class="team-social">
-                                    <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="team-item text-center bg-white rounded overflow-hidden pt-4">
-                            <h5 class="mb-2 px-4">Kamran Memon</h5>
-                            <p class="mb-3 px-4">Divorce Lawyer</p>
-                            
-                            <div class="team-img position-relative">
-                                <img class="img-fluid" src="img/Kamran Memon.webp" alt="">
+                                <img class="img-fluid" src="img/team-1.jpg" alt="">
                                 <div class="team-social">
                                     <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
                                     <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
@@ -408,9 +371,9 @@
                         </div>
                         <div class="team-item text-center bg-white rounded overflow-hidden pt-4">
                             <h5 class="mb-2 px-4">Attorney Name</h5>
-                            <p class="mb-3 px-4">Legal Advisor &  Associates</p>
+                            <p class="mb-3 px-4">Practice Area</p>
                             <div class="team-img position-relative">
-                                <img class="img-fluid" src="img/khalid zafar.jpg" alt="">
+                                <img class="img-fluid" src="img/team-2.jpg" alt="">
                                 <div class="team-social">
                                     <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
                                     <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
@@ -419,10 +382,22 @@
                             </div>
                         </div>
                         <div class="team-item text-center bg-white rounded overflow-hidden pt-4">
-                            <h5 class="mb-2 px-4">Ch-Shoaib-Advocate</h5>
-                            <p class="mb-3 px-4">CRIMINAL CASES</p>
+                            <h5 class="mb-2 px-4">Attorney Name</h5>
+                            <p class="mb-3 px-4">Practice Area</p>
                             <div class="team-img position-relative">
-                                <img class="img-fluid" src="img/Ch-Shoaib-Advocate.jpg"  alt="">
+                                <img class="img-fluid" src="img/team-3.jpg" alt="">
+                                <div class="team-social">
+                                    <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-item text-center bg-white rounded overflow-hidden pt-4">
+                            <h5 class="mb-2 px-4">Attorney Name</h5>
+                            <p class="mb-3 px-4">Practice Area</p>
+                            <div class="team-img position-relative">
+                                <img class="img-fluid" src="img/team-4.jpg" alt="">
                                 <div class="team-social">
                                     <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
                                     <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
@@ -450,59 +425,104 @@
     <!-- Team End -->
 
 
-    <!-- Testimonial Start -->
-    <div class="container-fluid py-5">
+   <!-- Testimonial Start -->
+   <div class="container-fluid py-5">
         <div class="container py-5">
             <div class="text-center pb-5">
                 <h6 class="text-uppercase">Testimonial</h6>
+
+                 <!-- testimonial Start -->
+                 <h1 class="mb-5">Write A Review</h1>
+
+            <div class="container py-2">
+        <div class="bg-appointment rounded">
+            <div class="row h-100 align-items-center justify-content-center">
+                <div class="col-lg-6 py-9">
+                    <div class="rounded p-5 my-7" style="background: rgba(55, 55, 63, .7);">
+                        <h1 class="text-center text-white mb-4">CLIENT FORM</h1>
+                        <form  action="clientform.php" method="post">
+                            <div class="form-group">
+                                <input type="text"  name ="txtname" class="form-control border-0 p-4" placeholder="Your client Name" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name ="txtcity" class="form-control border-0 p-4" placeholder="Your City" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name ="txtaddress" class="form-control border-0 p-4" placeholder="Your Address" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name ="txtemail" class="form-control border-0 p-4" placeholder="Your Email" required="required" />
+                            </div>
+                           
+                            <div class="form-group">
+                                <input type="number" name ="txtphone" class="form-control border-0 p-4" placeholder="Your phone no"  />
+                            </div>
+                      
+                            <div class="form-group">
+                                <input type="text" name ="txtfax" class="form-control border-0 p-4" placeholder="Your fax no" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <input type="password" name ="txtpassword" class="form-control border-0 p-4" placeholder="Your password" required="required" />
+                            </div>
+
+                                <button class="btn btn-primary btn-block border-0 py-3" type="submit">Get An Appointment</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
                 <h1 class="mb-5">What Our Clients Say</h1>
             </div>
             <div class="owl-carousel testimonial-carousel">
                 <div class="testimonial-item">
                     <div class="testimonial-text position-relative bg-secondary text-light rounded p-5 mb-4">
-                        Sed ea amet kasd elitr stet nonumy, stet rebum et ipsum est duo elitr clita lorem
+                        Good man, Better Attorney, really helped me figure out what to do with my legal situation.
                     </div>
                     <div class="d-flex align-items-center pt-3">
                         <img class="img-fluid rounded-circle" src="img/testimonial-1.jpg" style="width: 80px; height: 80px;" alt="">
                         <div class="pl-4">
-                            <h5>Client Name</h5>
-                            <p class="m-0">Profession</p>
+                            <h5>Crisper Lyfe</h5>
+                            <p class="m-0">Business Lawyer</p>
                         </div>
                     </div>
                 </div>
                 <div class="testimonial-item">
                     <div class="testimonial-text position-relative bg-secondary text-light rounded p-5 mb-4">
-                        Sed ea amet kasd elitr stet nonumy, stet rebum et ipsum est duo elitr clita lorem
+                        Steven Sedlock was very professional, quick and fair and provided their services at a affordable price. I would highly recommend them.
                     </div>
                     <div class="d-flex align-items-center pt-3">
                         <img class="img-fluid rounded-circle" src="img/testimonial-2.jpg" style="width: 80px; height: 80px;" alt="">
                         <div class="pl-4">
-                            <h5>Client Name</h5>
-                            <p class="m-0">Profession</p>
+                            <h5>Steven Sedlock</h5>
+                            <p class="m-0">Criminal Lawyer</p>
                         </div>
                     </div>
                 </div>
                 <div class="testimonial-item">
                     <div class="testimonial-text position-relative bg-secondary text-light rounded p-5 mb-4">
-                        Sed ea amet kasd elitr stet nonumy, stet rebum et ipsum est duo elitr clita lorem
+                        I cannot tell you how informative, real and quick his staff responded. The culture there is very unique and quite amazing
                     </div>
                     <div class="d-flex align-items-center pt-3">
                         <img class="img-fluid rounded-circle" src="img/testimonial-3.jpg" style="width: 80px; height: 80px;" alt="">
                         <div class="pl-4">
-                            <h5>Client Name</h5>
-                            <p class="m-0">Profession</p>
+                            <h5>Denise H.</h5>
+                            <p class="m-0">Civil law</p>
                         </div>
                     </div>
                 </div>
                 <div class="testimonial-item">
                     <div class="testimonial-text position-relative bg-secondary text-light rounded p-5 mb-4">
-                        Sed ea amet kasd elitr stet nonumy, stet rebum et ipsum est duo elitr clita lorem
+                        My husband and I recently used there services and to say we we are happy with there services is an understatement.
                     </div>
                     <div class="d-flex align-items-center pt-3">
                         <img class="img-fluid rounded-circle" src="img/testimonial-4.jpg" style="width: 80px; height: 80px;" alt="">
                         <div class="pl-4">
-                            <h5>Client Name</h5>
-                            <p class="m-0">Profession</p>
+                            <h5>Leon Walker</h5>
+                            <p class="m-0">Family laywer</p>
                         </div>
                     </div>
                 </div>
@@ -594,13 +614,13 @@
                 <p class="m-0 text-white">&copy; <a class="font-weight-bold" href="#">Your Site Name</a>. All Rights Reserved.</p>
             </div>
             <div class="col-md-6 text-center text-md-right">
-                <p class="m-0 text-white">Designed by <a class="font-weight-bold" href="https://htmlcodex.com">HTML Codex</a></p>
+                <p class="m-0 text-white">Designed by <a class="font-weight-bold" href="https://phpcodex.com">php Codex</a></p>
             </div>
         </div>
     </div>
     <!-- Footer End -->
 
-  
+
     <!-- Back to Top -->
     <a href="#" class="btn btn-primary px-3 back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
@@ -621,7 +641,6 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
- 
 </body>
 
-</html>
+</php>

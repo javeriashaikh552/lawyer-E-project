@@ -78,16 +78,17 @@
                         <div class="navbar-nav mr-auto py-0">
                             <a href="index.php" class="nav-item nav-link">Home</a>
                             <a href="about.php" class="nav-item nav-link">About</a>
-                            <a href="service.php" class="nav-item nav-link">Practice</a>
+                            <a href="service.php" class="nav-item nav-link active">Practice</a>
                             <a href="team.php" class="nav-item nav-link">Attorneys</a>
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Dropdown</a>
                                 <div class="dropdown-menu rounded-0 m-0">
-                                <a href="clientform.php" class="dropdown-item">Client form</a>
+                                    <a href="clientform.php" class="dropdown-item">Client form</a>
                                     <a href="lawyerform.php" class="dropdown-item">Lawyer form</a>
+                                    <!-- <a href="#" class="dropdown-item">Menu Item 3</a> -->
                                 </div>
                             </div>
-                            <a href="contact.php" class="nav-item nav-link active">Contact</a>
+                            <a href="contact.php" class="nav-item nav-link">Contact</a>
                         </div>
                         <!-- <a href="" class="btn btn-primary mr-3 d-none d-lg-block">Get A Quote</a> -->
                         <label for="exampleDataList" class="form-label"></label>
@@ -106,70 +107,146 @@
     </div>
     <!-- Header End -->
 
-
-    <!-- Page Header Start -->
-    <div class="container-fluid bg-page-header" style="margin-bottom: 90px;">
-        <div class="container">
-            <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
-                <h3 class="display-3 text-white text-uppercase">Contact</h3>
-                <div class="d-inline-flex text-white">
-                    <p class="m-0 text-uppercase"><a class="text-white" href="">Home</a></p>
-                    <i class="fa fa-angle-double-right pt-1 px-3"></i>
-                    <p class="m-0 text-uppercase">Contact</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Page Header End -->
-
-
-    <!-- Contact Start -->
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="text-center pb-2">
-                <h6 class="text-uppercase">Contact Us</h6>
-                <h1 class="mb-4">Contact For Any Query</h1>
-            </div>
-            <div class="row">
-                <div class="col-lg-6 mb-5 mb-lg-0">
-                    <div class="contact-form">
-                        <div id="success"></div>
-                        <form name="sentMessage" id="contactForm" novalidate="novalidate">
-                            <div class="form-row">
-                                <div class="col-sm-6 control-group">
-                                    <input type="text" class="form-control p-4" id="name" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" />
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                                <div class="col-sm-6 control-group">
-                                    <input type="email" class="form-control p-4" id="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email" />
-                                    <p class="help-block text-danger"></p>
-                                </div>
+ <!-- Appointment Start -->
+ <div class="container-fluid py-3">
+    <div class="container py-5">
+        <div class="bg-appointment rounded">
+            <div class="row h-100 align-items-center justify-content-center">
+                <div class="col-lg-6 py-9">
+                    <div class="rounded p-5 my-7" style="background: rgba(55, 55, 63, .7);">
+                        <h1 class="text-center text-white mb-4">LAWYER REGISTRATION</h1>
+                        <form  action="clientform.php" method="post">
+                            <div class="form-group">
+                                <input type="text"  name ="txtname" class="form-control border-0 p-4" placeholder="Your client Name" required="required" />
                             </div>
-                            <div class="control-group">
-                                <input type="text" class="form-control p-4" id="subject" placeholder="Subject" required="required" data-validation-required-message="Please enter a subject" />
-                                <p class="help-block text-danger"></p>
+                            <div class="form-group">
+                                <input type="text" name ="txtcity" class="form-control border-0 p-4" placeholder="Your City" required="required" />
                             </div>
-                            <div class="control-group">
-                                <textarea class="form-control p-4" rows="6" id="message" placeholder="Message" required="required" data-validation-required-message="Please enter your message"></textarea>
-                                <p class="help-block text-danger"></p>
+                            <div class="form-group">
+                                <input type="text" name ="txtaddress" class="form-control border-0 p-4" placeholder="Your Address" required="required" />
                             </div>
-                            <div>
-                                <button class="btn btn-primary btn-block" type="submit" id="sendMessageButton">Send Message</button>
+                            <div class="form-group">
+                                <input type="email" name ="txtemail" class="form-control border-0 p-4" placeholder="Your Email" required="required" />
+                            </div>
+                           
+                            <div class="form-group">
+                                <input type="number" name ="txtphone" class="form-control border-0 p-4" placeholder="Your phone no"  />
+                            </div>
+                      
+                            <div class="form-group">
+                                <input type="text" name ="txtfax" class="form-control border-0 p-4" placeholder="Your fax no" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <input type="password" name ="txtpassword" class="form-control border-0 p-4" placeholder="Your password" required="required" />
+                            </div>
+
+                                <button class="btn btn-primary btn-block border-0 py-3" type="submit">REGISTER</button>
                             </div>
                         </form>
                     </div>
                 </div>
-                <div class="col-lg-6" style="min-height: 400px;">
-                    <div class="position-relative h-100 rounded overflow-hidden">
-                        <iframe style="width: 100%; height: 100%; object-fit: cover;"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
-                        frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<?php 
+error_reporting(0);
+$lawyer = $_POST['lawyer'];
+  $city = $_POST['city'];
+  $address = $_POST['address'];
+  $email = $_POST['email'];
+  $mobile = $_POST['mobile'];
+  $fax = $_POST['fax'];
+  $password = $_POST['password'];
+
+
+$conn = mysqli_connect("localhost","root","","law");
+if(!$conn){
+    echo "connection refuse";
+}
+// $query ="INSERT INTO `client`(`id`, `client`, `city`, `address`, `email`, `phone`, `fax`, `password`) VALUES ('null','$name','$city','$address','$email','$phone','$fax','$password')";
+
+$q= mysqli_query($conn,$query);
+
+
+if(!$q){
+    echo "query not exectired!";
+}
+else{
+    echo "query sucess!";
+
+}
+header('location:clientform.php');
+
+
+?>
+<!-- <script>
+   window.location.assign("about.php");
+</script> -->
+<!-- Appointment End -->
+
+    <!-- Testimonial Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="text-center pb-5">
+                <h6 class="text-uppercase">Testimonial</h6>
+                <h1 class="mb-5">What Our Clients Say</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel">
+                <div class="testimonial-item">
+                    <div class="testimonial-text position-relative bg-secondary text-light rounded p-5 mb-4">
+                        Sed ea amet kasd elitr stet nonumy, stet rebum et ipsum est duo elitr clita lorem
+                    </div>
+                    <div class="d-flex align-items-center pt-3">
+                        <img class="img-fluid rounded-circle" src="img/testimonial-1.jpg" style="width: 80px; height: 80px;" alt="">
+                        <div class="pl-4">
+                            <h5>Client Name</h5>
+                            <p class="m-0">Profession</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-text position-relative bg-secondary text-light rounded p-5 mb-4">
+                        Sed ea amet kasd elitr stet nonumy, stet rebum et ipsum est duo elitr clita lorem
+                    </div>
+                    <div class="d-flex align-items-center pt-3">
+                        <img class="img-fluid rounded-circle" src="img/testimonial-2.jpg" style="width: 80px; height: 80px;" alt="">
+                        <div class="pl-4">
+                            <h5>Client Name</h5>
+                            <p class="m-0">Profession</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-text position-relative bg-secondary text-light rounded p-5 mb-4">
+                        Sed ea amet kasd elitr stet nonumy, stet rebum et ipsum est duo elitr clita lorem
+                    </div>
+                    <div class="d-flex align-items-center pt-3">
+                        <img class="img-fluid rounded-circle" src="img/testimonial-3.jpg" style="width: 80px; height: 80px;" alt="">
+                        <div class="pl-4">
+                            <h5>Client Name</h5>
+                            <p class="m-0">Profession</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-text position-relative bg-secondary text-light rounded p-5 mb-4">
+                        Sed ea amet kasd elitr stet nonumy, stet rebum et ipsum est duo elitr clita lorem
+                    </div>
+                    <div class="d-flex align-items-center pt-3">
+                        <img class="img-fluid rounded-circle" src="img/testimonial-4.jpg" style="width: 80px; height: 80px;" alt="">
+                        <div class="pl-4">
+                            <h5>Client Name</h5>
+                            <p class="m-0">Profession</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Contact End -->
+    <!-- Testimonial End -->
 
 
     <!-- Footer Start -->
