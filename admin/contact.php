@@ -102,38 +102,44 @@
                                     <thead>
                                         <tr>
                                         <th>id</th>
-                                            <th>course Name</th>
-                                            <th>instructor</th>
-                                              <th>lectures</th>
-                                            <th>duration</th>
-                                            <th>language</th>
-                                            <th>price</th>
-                                        
-                                
-                                           
-                                        
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Subject</th>
+                                        <th>Message</th>
+                                        <th>Action</th>
                                         </tr>
                                     </thead>
-
-
                                     
                                     <tfoot>
-                                        <tr>
-                                        <th>id</th>
-                                            <th>course Name</th>
-                                            <th>instructor</th>
-                                              <th>lectures</th>
-                                            <th>duration</th>
-                                            <th>language</th>
-                                            <th>price</th>
-                                          
-                                            
-                                           
-                                        </tr>
+                                    <tr>
+                                    <th>id</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Subject</th>
+                                    <th>Message</th>
+                                    <th>Action</th>
+                                    </tr>
                                     </tfoot>
-                                    <tbody>
-                                    
-                                    </tbody>
+<tbody>
+<?php
+include('include/config.php');
+$query="SELECT * from `contact`";
+$result = mysqli_query($conn,$query);
+if(mysqli_num_rows($result)){
+while ($row = mysqli_fetch_array($result)){
+?>
+<tr>
+<td><?= $row['id'] ?></td>
+<td><?= $row['name'] ?></td>
+<td><?= $row['email'] ?></td>
+<td><?= $row['subject'] ?></td>
+<td><?= $row['message'] ?></td>
+<td> <a  href ="contactremove.php?id=<?=$row['id']?>" class="btn btn-danger">Delete</a></td> 
+</tr>
+<?php
+} }
+?>
+</tbody>
                                 </table>
                             </div>
                         </div>

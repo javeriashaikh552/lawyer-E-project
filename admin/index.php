@@ -102,12 +102,14 @@
                             <div class="col-xl-2 col-md-5">
                                 <div class="card bg-warning text-white mb-4">
                                     <div class="card-body">Client</div>
-                                     <?php
+                                    <span>
+                                      <?php
                                     // $query="SELECT COUNT(*) AS 'count' FROM `client`";
                                     // $result =mysqli_query($conn,$query);
-                                    // $row = mysqli_fetch_assoc($result);
-                                    // echo $count = $row['count'];
-                                    ?> 
+                                    // $row =mysqli_fetch_assoc($result);
+                                    // echo $count =$row['count'];
+                                    ?>
+                                    </span>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
                                         <a class="small text-white stretched-link" href="./client.php">View Details</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>

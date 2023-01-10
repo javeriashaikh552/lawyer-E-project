@@ -12,7 +12,7 @@
   $tempiamgename = $image['tmp_name'];
 
   move_uploaded_file($tempiamgename,'images/'.$imagename.'');
-  mysqli_query($conn,"insert into lawyer values(null,'$lawyer','$city','$address','$email','$mobile','$fax','$password','$imagename')");
+  mysqli_query($conn,"insert into lawyer values(null,'$lawyer','$city','$address','$email','$mobile','$fax','$password','$image')");
 
   header('location:lawyer.php');
 ?>

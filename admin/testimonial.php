@@ -108,6 +108,7 @@ $conn = mysqli_connect("localhost","root","","law");
                                         <tr>
                                         <th>Id</th>
                                         <th>Name</th>
+                                        <th>Profession</th>
                                         <th>Description</th>
                                         <th>Image</th>
                                         <th>Action</th>                                        
@@ -118,6 +119,7 @@ $conn = mysqli_connect("localhost","root","","law");
                                     <tr>
                                         <th>Id</th>
                                         <th>Name</th>
+                                        <th>Profession</th>
                                         <th>Description</th>
                                         <th>Image</th>
                                         <th>Action</th>                                        
@@ -135,6 +137,8 @@ $conn = mysqli_connect("localhost","root","","law");
                 <tr>
                      <td><?= $row['id'] ?></td>
                     <td><?= $row['name'] ?></td>
+                    <td><?= $row['profession'] ?></td>
+
                     <td><?= $row['description'] ?></td>
                     <td><img src="images/<?= $row['image'] ?>" width="100px" height="100px" alt=""></td>
                     <td> <a  href ="testmonialedit.php?id=<?=$row['id']?>" class="btn btn-success">Edit</a></td> 
