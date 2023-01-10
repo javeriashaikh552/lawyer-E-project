@@ -2,7 +2,7 @@
 
 // Reboot
 //
-// Normalization of php elements, manually forked from Normalize.css to remove
+// Normalization of HTML elements, manually forked from Normalize.css to remove
 // styles targeting irrelevant browsers while applying new styles.
 //
 // Normalize is licensed MIT. https://github.com/necolas/normalize.css
@@ -22,14 +22,14 @@
   box-sizing: border-box; // 1
 }
 
-php {
+html {
   font-family: sans-serif; // 2
   line-height: 1.15; // 3
   -webkit-text-size-adjust: 100%; // 4
   -webkit-tap-highlight-color: rgba($black, 0); // 5
 }
 
-// Shim for "new" php5 structural elements to display correctly (IE10, older browsers)
+// Shim for "new" HTML5 structural elements to display correctly (IE10, older browsers)
 // TODO: remove in v5
 // stylelint-disable-next-line selector-list-comma-newline-after
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
@@ -401,7 +401,7 @@ fieldset {
   // unlike e.g. `<div>`s, which have `min-width: 0;` by default.
   // So we reset that to ensure fieldsets behave more like a standard block element.
   // See https://github.com/twbs/bootstrap/issues/12359
-  // and https://php.spec.whatwg.org/multipage/#the-fieldset-and-legend-elements
+  // and https://html.spec.whatwg.org/multipage/#the-fieldset-and-legend-elements
   min-width: 0;
   // Reset the default outline behavior of fieldsets so they don't affect page layout.
   padding: 0;
@@ -477,7 +477,7 @@ template {
   display: none; // Add the correct display in IE
 }
 
-// Always hide an element with the `hidden` php attribute (from PureCSS).
+// Always hide an element with the `hidden` HTML attribute (from PureCSS).
 // Needed for proper display in IE 10-.
 [hidden] {
   display: none !important;

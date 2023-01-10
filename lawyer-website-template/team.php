@@ -1,12 +1,12 @@
-<!DOCTYPE php>
-<php lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
     <title>JUSTICE - Free Lawyer Website Template</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free php Templates" name="keywords">
-    <meta content="Free php Templates" name="description">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -27,12 +27,12 @@
 </head>
 
 <body>
-    <!-- Header Start -->
-    <div class="container-fluid">
+        <!-- Header Start -->
+        <div class="container-fluid">
         <div class="row">
             <div class="col-lg-3 bg-secondary d-none d-lg-block">
                 <a href="index.php" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
-                    <h1 class="m-0 display-4 text-primary text-uppercase">Justice</h1>
+                    <h1 class="m-0 display-4 text-primary text-uppercase">Lawyer</h1>
                 </a>
             </div>
             <div class="col-lg-9">
@@ -69,7 +69,7 @@
                 </div>
                 <nav class="navbar navbar-expand-lg bg-white navbar-light p-0">
                     <a href="index.php" class="navbar-brand d-block d-lg-none">
-                        <h1 class="m-0 display-4 text-primary text-uppercase">Justice</h1>
+                        <h1 class="m-0 display-4 text-primary text-uppercase">Lawyer</h1>
                     </a>
                     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                         <span class="navbar-toggler-icon"></span>
@@ -77,21 +77,16 @@
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto py-0">
                             <a href="index.php" class="nav-item nav-link">Home</a>
-                            <a href="about.php" class="nav-item nav-link">About</a>
-                            <a href="service.php" class="nav-item nav-link">Practice</a>
+                            <a href="service.php" class="nav-item nav-link">Services</a>
                             <a href="team.php" class="nav-item nav-link active">Attorneys</a>
-                            <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Dropdown</a>
-                                <div class="dropdown-menu rounded-0 m-0">
-                                <a href="clientform.php" class="dropdown-item">Client form</a>
-                                    <a href="lawyerform.php" class="dropdown-item">Lawyer form</a>
-                                </div>
-                            </div>
+                            <a href="about.php" class="nav-item nav-link">About</a>
                             <a href="contact.php" class="nav-item nav-link">Contact</a>
+                            <a href="appointment.php" class="nav-item nav-link">Appointment</a>
+                            <a href="register.php" class="nav-item nav-link">Register</a>
+                            <a href="login.php" class="nav-item nav-link">Login</a>
                         </div>
-                        <!-- <a href="" class="btn btn-primary mr-3 d-none d-lg-block">Get A Quote</a> -->
                         <label for="exampleDataList" class="form-label"></label>
-<input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search..." style="width:280px;">
+<input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search..." style="width:300px;">
 <datalist id="datalistOptions">
   <option value="San Francisco">
   <option value="New York">
@@ -106,9 +101,8 @@
     </div>
     <!-- Header End -->
 
-
     <!-- Page Header Start -->
-    <div class="container-fluid bg-page-header" style="margin-bottom: 90px;">
+    <div class="container-fluid bg-page-header">
         <div class="container">
             <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
                 <h3 class="display-3 text-white text-uppercase">Attorney</h3>
@@ -203,8 +197,13 @@
 
 
     <!-- Appointment Start -->
-    <div class="container-fluid py-5">
-        <div class="container py-5">
+    <div class="container-fluid">
+        <div class="container py-2">
+        <div class="text-center pb-2">
+                <h5 class="text-uppercase">Need Help?</h5>
+                <h1 class="mb-4">Book An Appoinment Now</h1>
+            </div>
+
             <div class="bg-appointment rounded">
                 <div class="row h-100 align-items-center justify-content-center">
                     <div class="col-lg-6 py-5">
@@ -264,16 +263,16 @@
                     </div>
                 </div>
                 <div class="col-lg-6 pt-5 pb-lg-5">
-                    <div class="feature-text bg-white rounded p-lg-5">
-                        <h6 class="text-uppercase">Our Features</h6>
-                        <h1 class="mb-4">Why Choose Us</h1>
+                    <div class="feature-text bg-secondary rounded p-lg-5">
+                        <h6 class="text-uppercase text-white text-center">Our Features</h6>
+                        <h1 class="mb-4 text-white text-center">Why Choose Us</h1>
                         <div class="d-flex mb-4">
                             <div class="btn-primary btn-lg-square px-3" style="border-radius: 50px;">
                                 <h5 class="text-secondary m-0">01</h5>
                             </div>
                             <div class="ml-4">
-                                <h5>Best Law Practices</h5>
-                                <p class="m-0">Ipsum duo tempor elitr rebum stet magna amet kasd. Ipsum magna ipsum ipsum stet ipsum</p>
+                                <h5  class=" text-white">Best Law Practices</h5>
+                                <p class="m-0 text-white">Ipsum duo tempor elitr rebum stet magna amet kasd. Ipsum magna ipsum ipsum stet ipsum</p>
                             </div>
                         </div>
                         <div class="d-flex mb-4">
@@ -281,8 +280,8 @@
                                 <h5 class="text-secondary m-0">02</h5>
                             </div>
                             <div class="ml-4">
-                                <h5>Efficiency & Trust</h5>
-                                <p class="m-0">Ipsum duo tempor elitr rebum stet magna amet kasd. Ipsum magna ipsum ipsum stet ipsum</p>
+                                <h5 class=" text-white">Efficiency & Trust</h5>
+                                <p class="m-0 text-white">Ipsum duo tempor elitr rebum stet magna amet kasd. Ipsum magna ipsum ipsum stet ipsum</p>
                             </div>
                         </div>
                         <div class="d-flex">
@@ -290,8 +289,8 @@
                                 <h5 class="text-secondary m-0">03</h5>
                             </div>
                             <div class="ml-4">
-                                <h5>Results You Deserve</h5>
-                                <p class="m-0">Ipsum duo tempor elitr rebum stet magna amet kasd. Ipsum magna ipsum ipsum stet ipsum</p>
+                                <h5 class=" text-white">Results You Deserve</h5>
+                                <p class="m-0 text-white">Ipsum duo tempor elitr rebum stet magna amet kasd. Ipsum magna ipsum ipsum stet ipsum</p>
                             </div>
                         </div>
                     </div>
@@ -300,6 +299,102 @@
         </div>
     </div>
     <!-- Features End -->
+    <!-- Testimonial Start -->
+    <div class="container-fluid">
+        <div class="container py-3">
+        <div class="text-center pb-3">
+                <h5 class="text-uppercase">Testimonial</h5>
+                <h1 class="mb-5">What Our Clients Say</h1>
+            </div>
+        <div class="bg-appointment rounded">
+            <div class="row h-100 align-items-center justify-content-center">
+                <div class="col-lg-6 py-5">
+                    <div class="rounded p-3 my-3" style="background: rgba(55, 55, 63, .7);">
+                        <h1 class="text-center text-white mb-4">Write A review</h1>
+                        <form action="testimonialinsert.php" method="POST">
+                            <div class="form-group ml-3 mr-3">
+                                <input type="text" class="form-control border-0 p-4" name="name" placeholder="Your Name" required="required" />
+                            </div>
+                            <br>
+                            <div class="form-group ml-3 mr-3">
+                                <input type="email" class="form-control border-0 p-4" name="email" placeholder="Your Email" required="required" />
+                            </div>
+                            <br>
+                            <div class="form-group ml-3 mr-3">
+                                <input type="text" class="form-control border-0 p-4" name="description" placeholder="description" required="required" />
+                            </div>
+                            <br>
+                            <div class="form-group ml-3 mr-3 text-white ">
+                            <input type="file" name="image" class="form-control-file" id="exampleFormControlFile1" required="required" />
+                           </div>
+                           <br>
+
+                            <div class="form-group ml-3 mr-3">
+                                <button class="btn btn-primary btn-block border-0 py-3" type="submit">Send</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+            <br> <br>
+            <div class="container py-5">
+
+            <div class="owl-carousel testimonial-carousel">
+                <div class="testimonial-item">
+                    <div class="testimonial-text position-relative bg-secondary text-light rounded p-5 mb-4">
+                        Sed ea amet kasd elitr stet nonumy, stet rebum et ipsum est duo elitr clita lorem
+                    </div>
+                    <div class="d-flex align-items-center pt-3">
+                        <img class="img-fluid rounded-circle" src="img/testimonial-1.jpg" style="width: 80px; height: 80px;" alt="">
+                        <div class="pl-4">
+                            <h5>Client Name</h5>
+                            <p class="m-0">Profession</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-text position-relative bg-secondary text-light rounded p-5 mb-4">
+                        Sed ea amet kasd elitr stet nonumy, stet rebum et ipsum est duo elitr clita lorem
+                    </div>
+                    <div class="d-flex align-items-center pt-3">
+                        <img class="img-fluid rounded-circle" src="img/testimonial-2.jpg" style="width: 80px; height: 80px;" alt="">
+                        <div class="pl-4">
+                            <h5>Client Name</h5>
+                            <p class="m-0">Profession</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-text position-relative bg-secondary text-light rounded p-5 mb-4">
+                        Sed ea amet kasd elitr stet nonumy, stet rebum et ipsum est duo elitr clita lorem
+                    </div>
+                    <div class="d-flex align-items-center pt-3">
+                        <img class="img-fluid rounded-circle" src="img/testimonial-3.jpg" style="width: 80px; height: 80px;" alt="">
+                        <div class="pl-4">
+                            <h5>Client Name</h5>
+                            <p class="m-0">Profession</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-text position-relative bg-secondary text-light rounded p-5 mb-4">
+                        Sed ea amet kasd elitr stet nonumy, stet rebum et ipsum est duo elitr clita lorem
+                    </div>
+                    <div class="d-flex align-items-center pt-3">
+                        <img class="img-fluid rounded-circle" src="img/testimonial-4.jpg" style="width: 80px; height: 80px;" alt="">
+                        <div class="pl-4">
+                            <h5>Client Name</h5>
+                            <p class="m-0">Profession</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
 
 
     <!-- Footer Start -->
@@ -336,7 +431,7 @@
         <div class="row pt-5">
             <div class="col-lg-3 col-md-6 mb-5">
                 <a href="index.php" class="navbar-brand">
-                    <h1 class="m-0 mt-n2 display-4 text-primary text-uppercase">Justice</h1>
+                    <h1 class="m-0 mt-n2 display-4 text-primary text-uppercase">lawyer</h1>
                 </a>
                 <p>Volup amet magna clita tempor. Tempor sea eos vero ipsum. Lorem lorem sit sed elitr sed kasd et</p>
                 <div class="d-flex justify-content-start mt-4">
@@ -381,10 +476,10 @@
         </div>
         <div class="row p-4 mt-5 mx-0" style="background: rgba(256, 256, 256, .05);">
             <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
-                <p class="m-0 text-white">&copy; <a class="font-weight-bold" href="#">Your Site Name</a>. All Rights Reserved.</p>
+                <p class="m-0 text-white">&copy; <a class="font-weight-bold" href="#">Lawyer Website</a>. All Rights Reserved.</p>
             </div>
             <div class="col-md-6 text-center text-md-right">
-                <p class="m-0 text-white">Designed by <a class="font-weight-bold" href="https://phpcodex.com">php Codex</a></p>
+                <p class="m-0 text-white">Designed by <a class="font-weight-bold">SYEDA AREEQA</a></p>
             </div>
         </div>
     </div>
@@ -413,4 +508,4 @@
     <script src="js/main.js"></script>
 </body>
 
-</php>
+</html>

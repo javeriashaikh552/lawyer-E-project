@@ -1,3 +1,6 @@
+<?php
+$conn = mysqli_connect("localhost","root","","law");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -80,7 +83,7 @@
                             <a href="service.php" class="nav-item nav-link">Services</a>
                             <a href="team.php" class="nav-item nav-link">Attorneys</a>
                             <a href="about.php" class="nav-item nav-link">About</a>
-                            <a href="contact.php" class="nav-item nav-link active">Contact</a>
+                            <a href="contact.php" class="nav-item nav-link">Contact</a>
                             <a href="appointment.php" class="nav-item nav-link">Appointment</a>
                             <a href="register.php" class="nav-item nav-link">Register</a>
                             <a href="login.php" class="nav-item nav-link">Login</a>
@@ -105,65 +108,71 @@
     <div class="container-fluid bg-page-header">
         <div class="container">
             <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
-                <h3 class="display-3 text-white text-uppercase">Contact</h3>
+                <h3 class="display-3 text-white text-uppercase">Register</h3>
                 <div class="d-inline-flex text-white">
                     <p class="m-0 text-uppercase"><a class="text-white" href="">Home</a></p>
                     <i class="fa fa-angle-double-right pt-1 px-3"></i>
-                    <p class="m-0 text-uppercase">Contact</p>
+                    <p class="m-0 text-uppercase">Register</p>
                 </div>
             </div>
         </div>
     </div>
     <!-- Page Header End -->
 
-
-    <!-- Contact Start -->
-    <div class="container-fluid py-5">
-        <div class="container">
-            <div class="text-center">
-                <h5 class="text-uppercase">Contact Us</h5>
-                <h1 class="mb-4">Contact For Any Query</h1>
+    <!-- Testimonial Start -->
+    <div class="container-fluid">
+        <div class="container py-3">
+        <div class="text-center pb-3">
+                <h5 class="text-uppercase mt-4">NEW HERE?</h5>
+                <h1 class="mb-3">Register Yourself</h1>
             </div>
-            <div class="row">
-                <div class="col-lg-6 mb-5 mb-lg-0">
-                    <div class="contact-form">
-                        <div id="success"></div>
-                        <form name="sentMessage" id="contactForm" novalidate="novalidate">
-                            <div class="form-row">
-                                <div class="col-sm-6 control-group">
-                                    <input type="text" class="form-control p-4" name="name" id="name" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" />
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                                <div class="col-sm-6 control-group">
-                                    <input type="email" class="form-control p-4" name="email" id="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email" />
-                                    <p class="help-block text-danger"></p>
-                                </div>
+        <div class="bg-appointment rounded">
+            <div class="row h-100 align-items-center justify-content-center">
+                <div class="col-lg-6 py-5">
+                    <div class="rounded p-3 my-3" style="background: rgba(55, 55, 63, .7);">
+                        <h4 class="text-center text-white mb-4">Client Registration Form</h4>
+                        <form action="admin/lawyerinsert.php" method="POST">
+                            <!-- NAME -->
+                            <div class="form-group ml-3 mr-3">
+                                <input type="text" class="form-control border-0 p-4" name="client" placeholder="Your Name" required="required" />
                             </div>
-                            <div class="control-group">
-                                <input type="text" class="form-control p-4" name="subject" id="subject" placeholder="Subject" required="required" data-validation-required-message="Please enter a subject" />
-                                <p class="help-block text-danger"></p>
+                            <!-- CITY -->
+                            <div class="form-group ml-3 mr-3">
+                                <input type="text" class="form-control border-0 p-4" name="city" placeholder="Your city" required="required" />
                             </div>
-                            <div class="control-group">
-                                <textarea class="form-control p-4" rows="6" name="message" id="message" placeholder="Message" required="required" data-validation-required-message="Please enter your message"></textarea>
-                                <p class="help-block text-danger"></p>
+                            <!-- ADDRESS -->
+                            <div class="form-group ml-3 mr-3">
+                                <input type="text" class="form-control border-0 p-4" name="address" placeholder="Your address" required="required" />
                             </div>
-                            <div>
-                                <button class="btn btn-primary btn-block" type="submit" id="sendMessageButton">Send Message</button>
+                            <!-- EMAIL -->
+                            <div class="form-group ml-3 mr-3">
+                                <input type="email" class="form-control border-0 p-4" name="email" placeholder="Your email" required="required" />
                             </div>
+                            <!-- phone NO -->
+                            <div class="form-group ml-3 mr-3">
+                                <input type="numbers" class="form-control border-0 p-4" name="phone" placeholder="Your phone no" required="required" />
+                            </div>
+                            <!-- FAX NO -->
+                            <div class="form-group ml-3 mr-3">
+                                <input type="numbers" class="form-control border-0 p-4" name="fax" placeholder="Your fax no" required="required" />
+                            </div>
+                            <!-- PASSWORD -->
+                            <div class="form-group ml-3 mr-3">
+                                <input type="password" class="form-control border-0 p-4" name="password" placeholder="Type a password" required="required" />
+                            </div>
+                           <!-- BTN -->
+                            <div class="form-group ml-3 mr-3">
+                                <button class="btn btn-primary btn-block border-0 py-3" type="submit">REGISTER</button>
+                            </div>
+                                <a class="ml-4" href="clientlogin.php" style="text-decoration:none; color:white;">Already have an account?</a>
+                                <br>
                         </form>
-                    </div>
-                </div>
-                <div class="col-lg-6" style="min-height: 400px;">
-                    <div class="position-relative h-100 rounded overflow-hidden">
-                        <iframe style="width: 100%; height: 100%; object-fit: cover;"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
-                        frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Contact End -->
+    <!-- Registration End -->
 
 
 
@@ -247,10 +256,10 @@
         </div>
         <div class="row p-4 mt-5 mx-0" style="background: rgba(256, 256, 256, .05);">
             <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
-                <p class="m-0 text-white">&copy; <a class="font-weight-bold" href="#">Your Site Name</a>. All Rights Reserved.</p>
+                <p class="m-0 text-white">&copy; <a class="font-weight-bold" href="#">Lawyer Website</a>. All Rights Reserved.</p>
             </div>
             <div class="col-md-6 text-center text-md-right">
-                <p class="m-0 text-white">Designed by <a class="font-weight-bold" href="https://htmlcodex.com">HTML Codex</a></p>
+                <p class="m-0 text-white">Designed by <a class="font-weight-bold">SYEDA AREEQA</a></p>
             </div>
         </div>
     </div>

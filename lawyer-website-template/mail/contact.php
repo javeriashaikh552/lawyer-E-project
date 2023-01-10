@@ -4,10 +4,10 @@ if(empty($_POST['name']) || empty($_POST['subject']) || empty($_POST['message'])
   exit();
 }
 
-$name = strip_tags(phpspecialchars($_POST['name']));
-$email = strip_tags(phpspecialchars($_POST['email']));
-$m_subject = strip_tags(phpspecialchars($_POST['subject']));
-$message = strip_tags(phpspecialchars($_POST['message']));
+$name = strip_tags(htmlspecialchars($_POST['name']));
+$email = strip_tags(htmlspecialchars($_POST['email']));
+$m_subject = strip_tags(htmlspecialchars($_POST['subject']));
+$message = strip_tags(htmlspecialchars($_POST['message']));
 
 $to = "info@example.com"; // Change this email to your //
 $subject = "$m_subject:  $name";

@@ -1,12 +1,12 @@
-<!DOCTYPE php>
-<php lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
     <title>JUSTICE - Free Lawyer Website Template</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free php Templates" name="keywords">
-    <meta content="Free php Templates" name="description">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -32,7 +32,7 @@
         <div class="row">
             <div class="col-lg-3 bg-secondary d-none d-lg-block">
                 <a href="index.php" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
-                    <h1 class="m-0 display-4 text-primary text-uppercase">LAWYER</h1>
+                    <h1 class="m-0 display-4 text-primary text-uppercase">Lawyer</h1>
                 </a>
             </div>
             <div class="col-lg-9">
@@ -69,7 +69,7 @@
                 </div>
                 <nav class="navbar navbar-expand-lg bg-white navbar-light p-0">
                     <a href="index.php" class="navbar-brand d-block d-lg-none">
-                        <h1 class="m-0 display-4 text-primary text-uppercase">LAWYER</h1>
+                        <h1 class="m-0 display-4 text-primary text-uppercase">Lawyer</h1>
                     </a>
                     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                         <span class="navbar-toggler-icon"></span>
@@ -77,25 +77,16 @@
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto py-0">
                             <a href="index.php" class="nav-item nav-link">Home</a>
-                            <a href="about.php" class="nav-item nav-link active">About</a>
-                            <a href="service.php" class="nav-item nav-link">Practice</a>
+                            <a href="service.php" class="nav-item nav-link">Services</a>
                             <a href="team.php" class="nav-item nav-link">Attorneys</a>
-                            <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Dropdown</a>
-                                <div class="dropdown-menu rounded-0 m-0">
-                                <a href="clientform.php" class="dropdown-item">Client form</a>
-                                    <a href="lawyerform.php" class="dropdown-item">Lawyer form</a>
-                                </div>
-                            </div>
+                            <a href="about.php" class="nav-item nav-link active">About</a>
                             <a href="contact.php" class="nav-item nav-link">Contact</a>
+                            <a href="appointment.php" class="nav-item nav-link">Appointment</a>
+                            <a href="register.php" class="nav-item nav-link">Register</a>
+                            <a href="login.php" class="nav-item nav-link">Login</a>
                         </div>
-                        <!-- <a href="" class="btn btn-primary mr-3 d-none d-lg-block">Get A Quote</a> -->
-                        <!-- <form action="/action_page.php">
-                            <input type="text" placeholder="Search.." name="search">
-                            <button type="submit"><i class="fa fa-search"></i></button>
-                          </form> -->
-                          <label for="exampleDataList" class="form-label"></label>
-<input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search..." style="width:280px;">
+                        <label for="exampleDataList" class="form-label"></label>
+<input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search..." style="width:300px;">
 <datalist id="datalistOptions">
   <option value="San Francisco">
   <option value="New York">
@@ -108,9 +99,7 @@
             </div>
         </div>
     </div>
-    <!-- Header End -->
-
-
+<!-- header end -->
     <!-- Page Header Start -->
     <div class="container-fluid bg-page-header" style="margin-bottom: 90px;">
         <div class="container">
@@ -148,89 +137,97 @@
 
 
     <!-- Appointment Start -->
-    <div class="container-fluid py-5">
-        <div class="container py-5">
+    <div class="container-fluid">
+        <div class="container">
+        <!-- <div class="text-center">
+                <h5 class="text-uppercase">Testimonial</h5>
+                <h1 class="mb-5">What Our Clients Say</h1>
+            </div>
+
             <div class="bg-appointment rounded">
                 <div class="row h-100 align-items-center justify-content-center">
                     <div class="col-lg-6 py-5">
                         <div class="rounded p-5 my-5" style="background: rgba(55, 55, 63, .7);">
                             <h1 class="text-center text-white mb-4">Get An Appointment</h1>
-                            <form action="about.php" method="post">
+                            <form>
                                 <div class="form-group">
-                                    <input type="text" name ="txtname" class="form-control border-0 p-4" placeholder="Your Name" required="required" />
+                                    <input type="text" class="form-control border-0 p-4" placeholder="Your Name" required="required" />
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" name ="txtemail" class="form-control border-0 p-4" placeholder="Your Email" required="required" />
+                                    <input type="email" class="form-control border-0 p-4" placeholder="Your Email" required="required" />
                                 </div>
                                 <div class="form-row">
                                     <div class="col-6">
                                         <div class="form-group">
-                                            <div class="Date" id="Date" data-target-input="nearest">
-                                                <input type="Date" name ="txtDate" class="form-control border-0 p-4 datetimepicker-input" placeholder="Select Date" data-target="#Date" data-toggle="datetimepicker"/>
+                                            <div class="date" id="date" data-target-input="nearest">
+                                                <input type="text" class="form-control border-0 p-4 datetimepicker-input" placeholder="Select Date" data-target="#date" data-toggle="datetimepicker"/>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-6">
                                         <div class="form-group">
                                             <div class="time" id="time" data-target-input="nearest">
-                                                <input type="text" name="txtTime" class="form-control border-0 p-4 datetimepicker-input" placeholder="Select Time" data-target="#time" data-toggle="datetimepicker"/>
+                                                <input type="text" class="form-control border-0 p-4 datetimepicker-input" placeholder="Select Time" data-target="#time" data-toggle="datetimepicker"/>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <select name="txtService" class="custom-select border-0 px-4" style="height: 47px;">
-                                        <option selected>Select A Lawyer</option>
-                                        <option selected>Civil</option>
-                                        <option selected>Affidavit</option>
-                                        <option selected>Divorce</option>
-                                        <option selected>Criminal</option>
+                                    <select class="custom-select border-0 px-4" style="height: 47px;">
+                                        <option selected>Select A Service</option>
+                                        <option value="1">Service 1</option>
+                                        <option value="2">Service 1</option>
+                                        <option value="3">Service 1</option>
                                     </select>
-                                
-                                
-                                        </div>  
-                                        <div>
-                                    <button class="btn btn-primary btn-block border-0 py-3"href="./login.html" type="submit">Get An Appointment</button>
+                                </div>
+                                <div>
+                                    <button class="btn btn-primary btn-block border-0 py-3" type="submit">Get An Appointment</button>
                                 </div>
                             </form>
                         </div>
                     </div>
                 </div>
+            </div> -->
+            <h1>Legal Advice. Strategy. Solutions.</h1>
+            <p>We are proud to be recognized as one of the top business law firms in California. We help small business owners
+                <br>
+                 and startups launch their companies, fund their ongoing activities and serve as their outside general counsel 
+                 <br>
+                 so they can focus on successfully running their business. We act as a catalyst by providing our clients with 
+                 <br>
+                 exceptional resources to help their businesses grow, and when the time is right we can help navigate a successful 
+                 <br>
+                 exit. It is like having a good friend or family member advising your business.</p>
+
+
+                 <br>
+                 <br>
+               <h1>How Can We Help?</h1>
+               <p>Based in San Francisco, Bend Law Group is a small law firm of experienced business attorneys and startup lawyers. 
+                <br>
+               Whether you’re just starting a company, or looking to sell a company you’ve built, we serve as your legal counsel each step 
+               <br>
+               of the way. No project is too small or trivial, and our continuous and accessible support allows you to focus on what’s important
+               <br>
+                to you.</p>
+
+        </div>
+    </div>
+    <!-- Appointment End -->
+
+    <!-- Action Start -->
+    <div class="container-fluid bg-page-header mt-5" style="height: 500px;">
+        <div class="container py-5">
+            <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 500px">
+            <h2 class="text-white mb-4">Let's get started. Contact us now for a Consultation</h2>
+            <br>
+            <a class="btn btn-primary py-3 px-5 mt-2" href="contact.php">Contact Us Now</a>
+            <br><br>
             </div>
         </div>
     </div>
-    <?php 
-error_reporting(0);
-$name=$_POST['txtname'];
-$email=$_POST['txtemail'];
-$Date=$_POST['txtDate'];
-$Time=$_POST['txtTime'];
-$Service=$_POST['txtService'];
 
-
-$conn = mysqli_connect("localhost","root","","law");
-if(!$conn){
-    echo "connection refuse";
-}
-
-$query ="INSERT INTO `appointment`(`id`,`name`,`email`,`Date`,`Time`,`Service`,`image`) VALUES ('null','$name','$email','$Date','$Time','$Service','$image')";
-
-$q= mysqli_query($conn,$query);
-
-
-if(!$q){
-    echo "query not exectired!";
-}
-else{
-    echo "query sucess!";
-
-}
-header('location:about.php');
-
-
-?>
-    <!-- Appointment End -->
-
+    <!-- Action End -->
 
     <!-- Features Start -->
     <div class="container-fluid py-5">
@@ -242,16 +239,16 @@ header('location:about.php');
                     </div>
                 </div>
                 <div class="col-lg-6 pt-5 pb-lg-5">
-                    <div class="feature-text bg-white rounded p-lg-5">
-                        <h6 class="text-uppercase">Our Features</h6>
-                        <h1 class="mb-4">Why Choose Us</h1>
+                    <div class="feature-text bg-secondary rounded p-lg-5">
+                        <h6 class="text-uppercase text-white text-center">Our Features</h6>
+                        <h1 class="mb-4 text-white text-center">Why Choose Us</h1>
                         <div class="d-flex mb-4">
                             <div class="btn-primary btn-lg-square px-3" style="border-radius: 50px;">
                                 <h5 class="text-secondary m-0">01</h5>
                             </div>
                             <div class="ml-4">
-                                <h5>Best Law Practices</h5>
-                                <p class="m-0">Ipsum duo tempor elitr rebum stet magna amet kasd. Ipsum magna ipsum ipsum stet ipsum</p>
+                                <h5  class=" text-white">Best Law Practices</h5>
+                                <p class="m-0 text-white">Ipsum duo tempor elitr rebum stet magna amet kasd. Ipsum magna ipsum ipsum stet ipsum</p>
                             </div>
                         </div>
                         <div class="d-flex mb-4">
@@ -259,8 +256,8 @@ header('location:about.php');
                                 <h5 class="text-secondary m-0">02</h5>
                             </div>
                             <div class="ml-4">
-                                <h5>Efficiency & Trust</h5>
-                                <p class="m-0">Ipsum duo tempor elitr rebum stet magna amet kasd. Ipsum magna ipsum ipsum stet ipsum</p>
+                                <h5 class=" text-white">Efficiency & Trust</h5>
+                                <p class="m-0 text-white">Ipsum duo tempor elitr rebum stet magna amet kasd. Ipsum magna ipsum ipsum stet ipsum</p>
                             </div>
                         </div>
                         <div class="d-flex">
@@ -268,8 +265,8 @@ header('location:about.php');
                                 <h5 class="text-secondary m-0">03</h5>
                             </div>
                             <div class="ml-4">
-                                <h5>Results You Deserve</h5>
-                                <p class="m-0">Ipsum duo tempor elitr rebum stet magna amet kasd. Ipsum magna ipsum ipsum stet ipsum</p>
+                                <h5 class=" text-white">Results You Deserve</h5>
+                                <p class="m-0 text-white">Ipsum duo tempor elitr rebum stet magna amet kasd. Ipsum magna ipsum ipsum stet ipsum</p>
                             </div>
                         </div>
                     </div>
@@ -314,7 +311,7 @@ header('location:about.php');
         <div class="row pt-5">
             <div class="col-lg-3 col-md-6 mb-5">
                 <a href="index.php" class="navbar-brand">
-                    <h1 class="m-0 mt-n2 display-4 text-primary text-uppercase">Justice</h1>
+                    <h1 class="m-0 mt-n2 display-4 text-primary text-uppercase">Lawyer</h1>
                 </a>
                 <p>Volup amet magna clita tempor. Tempor sea eos vero ipsum. Lorem lorem sit sed elitr sed kasd et</p>
                 <div class="d-flex justify-content-start mt-4">
@@ -359,10 +356,10 @@ header('location:about.php');
         </div>
         <div class="row p-4 mt-5 mx-0" style="background: rgba(256, 256, 256, .05);">
             <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
-                <p class="m-0 text-white">&copy; <a class="font-weight-bold" href="#">Your Site Name</a>. All Rights Reserved.</p>
+                <p class="m-0 text-white">&copy; <a class="font-weight-bold" href="#">Lawyer Website</a>. All Rights Reserved.</p>
             </div>
             <div class="col-md-6 text-center text-md-right">
-                <p class="m-0 text-white">Designed by <a class="font-weight-bold" href="https://phpcodex.com">php Codex</a></p>
+                <p class="m-0 text-white">Designed by <a class="font-weight-bold">SYEDA AREEQA</a></p>
             </div>
         </div>
     </div>
@@ -391,4 +388,4 @@ header('location:about.php');
     <script src="js/main.js"></script>
 </body>
 
-</php>
+</html>
