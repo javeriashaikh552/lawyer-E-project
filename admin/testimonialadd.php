@@ -104,12 +104,6 @@
         </div>
         <br>
         <div class="form-group">
-            <label for="colFormLabel">Profession</label>
-            <input type="text" name ="profession" class="form-control" id="colFormLabel" placeholder="Enter Profession ">
-        </div>
-        <br>
-
-        <div class="form-group">
           <label for="colFormLabel">Description</label>
           <input type="text" name="description" class="form-control" id="colFormLabel" placeholder="Enter Description">
         </div>

@@ -1,3 +1,8 @@
+<?php
+$conn = mysqli_connect("localhost","root","","law");
+
+?>
+
 <!DOCTYPE php>
 <php lang="en">
     <head>
@@ -94,6 +99,12 @@
                                 <div class="card bg-primary text-white mb-4">
                                     <div class="card-body">Lawyer</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
+                                    <?php
+                                    $query = "SELECT COUNT(*) AS 'count' FROM `lawyer`";
+                                    $result = mysqli_query ($conn , $query);
+                                    $row = mysqli_fetch_assoc ($result);
+                                    echo $count = $row['count'];
+                                    ?> 
                                         <a class="small text-white stretched-link" href="lawyer.php">View Details</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
@@ -102,15 +113,14 @@
                             <div class="col-xl-2 col-md-5">
                                 <div class="card bg-warning text-white mb-4">
                                     <div class="card-body">Client</div>
-                                    <span>
-                                      <?php
-                                    // $query="SELECT COUNT(*) AS 'count' FROM `client`";
-                                    // $result =mysqli_query($conn,$query);
-                                    // $row =mysqli_fetch_assoc($result);
-                                    // echo $count =$row['count'];
-                                    ?>
-                                    </span>
+                                   
                                     <div class="card-footer d-flex align-items-center justify-content-between">
+                                    <?php
+                                    $query = "SELECT COUNT(*) AS 'count' FROM `client`";
+                                    $result = mysqli_query ($conn , $query);
+                                    $row = mysqli_fetch_assoc ($result);
+                                    echo $count = $row['count'];
+                                    ?> 
                                         <a class="small text-white stretched-link" href="./client.php">View Details</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
@@ -121,6 +131,12 @@
                                     <div class="card-body">Services</div>
                                 
                                     <div class="card-footer d-flex align-items-center justify-content-between">
+                                    <?php
+                                    // $query = "SELECT COUNT(*) AS 'count' FROM `services`";
+                                    // $result = mysqli_query ($conn , $query);
+                                    // $row = mysqli_fetch_assoc ($result);
+                                    // echo $count = $row['count'];
+                                    ?> 
                                         <a class="small text-white stretched-link" href="service.php">View Details</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
@@ -130,6 +146,12 @@
                                 <div class="card bg-danger text-white mb-4">
                                     <div class="card-body">Appointment</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
+                                    <?php
+                                    $query = "SELECT COUNT(*) AS 'count' FROM `appointment`";
+                                    $result = mysqli_query ($conn , $query);
+                                    $row = mysqli_fetch_assoc ($result);
+                                    echo $count = $row['count'];
+                                    ?> 
                                         <a class="small text-white stretched-link" href="appointment.php">View Details</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
@@ -139,6 +161,12 @@
                                 <div class="card bg-secondary text-white mb-4">
                                     <div class="card-body">Testimonial</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
+                                    <?php
+                                    $query = "SELECT COUNT(*) AS 'count' FROM `testimonial`";
+                                    $result = mysqli_query ($conn , $query);
+                                    $row = mysqli_fetch_assoc ($result);
+                                    echo $count = $row['count'];
+                                    ?> 
                                         <a class="small text-white stretched-link" href="testimonial.php">View Details</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
