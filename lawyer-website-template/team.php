@@ -299,11 +299,11 @@
         </div>
     </div>
     <!-- Features End -->
-    <!-- Testimonial Start -->
-    <div class="container-fluid">
+      <!-- Testimonial Start -->
+      <div class="container-fluid">
         <div class="container py-3">
         <div class="text-center pb-3">
-                <h5 class="text-uppercase">Testimonial</h5>
+                <h6 class="text-uppercase">Testimonial</h6>
                 <h1 class="mb-5">What Our Clients Say</h1>
             </div>
         <div class="bg-appointment rounded">
@@ -311,13 +311,13 @@
                 <div class="col-lg-6 py-5">
                     <div class="rounded p-3 my-3" style="background: rgba(55, 55, 63, .7);">
                         <h1 class="text-center text-white mb-4">Write A review</h1>
-                        <form action="testimonialinsert.php" method="POST">
+                        <form action="team.php" method="POST">
                             <div class="form-group ml-3 mr-3">
                                 <input type="text" class="form-control border-0 p-4" name="name" placeholder="Your Name" required="required" />
                             </div>
                             <br>
                             <div class="form-group ml-3 mr-3">
-                                <input type="email" class="form-control border-0 p-4" name="email" placeholder="Your Email" required="required" />
+                                <input type="text" class="form-control border-0 p-4" name="profession" placeholder="Your Profession" required="required" />
                             </div>
                             <br>
                             <div class="form-group ml-3 mr-3">
@@ -338,7 +338,41 @@
             </div>
         </div>
     </div>
-            <br> <br>
+    <?php 
+error_reporting(0);
+$name = $_POST['name'];
+$profession = $_POST['profession'];
+$description = $_POST['description'];
+$image= $_FILES['image'];
+$imagename = $image['name'];
+$tempiamgename = $image['tmp_name'];
+//  $image= $_FILES['image'];
+//  $imagename = $image['name'];
+//  $tempiamgename = $image['tmp_name'];
+
+//  move_uploaded_file($tempiamgename,'images/'.$imagename.'');
+
+$conn = mysqli_connect("localhost","root","","law");
+if(!$conn){
+    echo "connection refuse";
+}
+$query ="INSERT INTO `testimonial`(`id`, `name`, `profession`, `description`, `image`) VALUES ('null','$name','$profession','$description','$image')";
+
+$q= mysqli_query($conn,$query);
+
+
+// if(!$q){
+//     echo "query not exectired!";
+// }
+// else{
+//     echo "query sucess!";
+
+// }
+header('location:team.php');
+
+
+?>
+<br><br>
             <div class="container py-5">
 
             <div class="owl-carousel testimonial-carousel">
