@@ -11,111 +11,114 @@
         <link href="css/styles.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
     </head>
+    <style>
+        .heading{
+            text-align:center;
+            font-family:fantasy;
+            src: url(sansation_bold.woff);
+            margin-bottom:30px;
+        }
+        .btn22{
+            background-color:black;
+            width:20%;
+            margin-left:32%;
+            color:white;
+        }
+        .btn22:hover{
+            background-color:grey;
+        }
+
+    </style>
+
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3" href="index.php">Lawyer Website</a>
+            <a class="navbar-brand ps-3" href="dashboard.php">Lawyer Website</a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
-            <!-- Navbar Search-->
-            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
-                <div class="input-group">
-                    <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
-                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
-                </div>
-            </form>
-            <!-- Navbar-->
-            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#!">Settings</a></li>
-                        <li><a class="dropdown-item" href="#!">Activity Log</a></li>
-                        <li><hr class="dropdown-divider" /></li>
-                        <li><a class="dropdown-item" href="#!">Logout</a></li>
-                    </ul>
-                </li>
-            </ul>
         </nav>
         <div id="layoutSidenav">
-            <div id="layoutSidenav_nav">
+        <div id="layoutSidenav_nav">
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">Core</div>
-                            <a class="nav-link" href="index.php">
+                            <a class="nav-link" href="dashboard.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Dashboard
+                                DASHBOARD
                             </a>
                             <a class="nav-link" href="lawyer.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-vcard"></i></div>
-                               Lawyer
+                               LAWYER
                             </a>
-
-
                             <a class="nav-link" href="client.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
-                               Clients
+                               CLIENTS
                             </a>
-
                             <a class="nav-link" href="service.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                               Services
-                            </a>
+                               SERVICES
                             <a class="nav-link" href="appointment.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-calendar"></i></div>
-                                Appointment
+                                APPOINTMENT
                             </a>
-
-
                             <a class="nav-link" href="testimonial.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-comment"></i></div>
-                                Testimonial
+                                TESTIMONIAL
                             </a>
                             <a class="nav-link" href="contact.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-phone"></i></div>
-                                Contact-Us
+                                CONTACT-US
                             </a>
-
-
                         </div>
                     </div>
                 </nav>
             </div>
+
             <div id="layoutSidenav_content">
                 <main>
                 <div class="container-fluid px-4">
-                        <h1 class="mt-4 align-item-center">Testimonial Add page</h1>
-                        <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Testimonial Add page</li>
-                        </ol>
-                        <div class="card mb-4">
-                        </div>
+                <h1 class="mt-4 heading"><span><i class="fa-regular fa-star"></i></span> ADD SERVICES <span><i class="fa-regular fa-star"></i></span></h1>
+
              </div>
 
-            <div class="card mb-4">
+            <div class="card mb-4 card-form">
                 <div class="card-body">
 
-                <form action="testimonialinsert.php" method="POST" enctype="multipart/form-data" style="margin-left:2%; margin-right:2%;">
-        <div class="form-group">
-            <label for="colFormLabel">Name</label>
-            <input type="text" name ="name" class="form-control" id="colFormLabel" placeholder="Enter student name">
-        </div>
-        <br>
-        <div class="form-group">
-          <label for="colFormLabel">Description</label>
-          <input type="text" name="description" class="form-control" id="colFormLabel" placeholder="Enter Description">
-        </div>
-        <br>
-            <div class="form-group">
-                <label for="exampleFormControlFile1">Example file input</label>
-                <input type="file" name="image" class="form-control-file" id="exampleFormControlFile1">
-            </div>
-            <br>
-        <input type="submit" class="btn btn-primary" value="submit"> 
-    </form>
+            <form action="serviceinsert.php" method="POST" enctype="multipart/form-data" style="margin-left:2%; margin-right:2%;">
+                <!-- lawyer name -->
+                <div class="form-group">
+                <label for="colFormLabel">Lawyer Name</label>
+                <input type="text" name ="lawyer" class="form-control" id="colFormLabel" placeholder="Enter Lawyer name">
+               </div>
+               <br>
+               <!-- lawyer city -->
+               <div class="form-group">
+                <label for="colFormLabel">City</label>
+                <input type="text" name ="city" class="form-control" id="colFormLabel" placeholder="Enter your city">
+               </div>
+               <br>
+               <!-- lawyer Service -->
+               <div class="form-group">
+                <label for="colFormLabel">Service</label>
+                <input type="text" name ="service" class="form-control" id="colFormLabel" placeholder="Enter the service">
+               </div>
+               <br>
+                 <!-- lawyer Experience -->
+                <div class="form-group">
+                <label for="colFormLabel">Experience</label>
+                <input type="text" name ="experience" class="form-control" id="colFormLabel" placeholder="Enter your experience">
+               </div>
+               <br>
 
+               <!-- cirtificate -->
+               <div class="form-group">
+                <label for="exampleFormControlFile1">Certificate(Please provide your lawyer prove, such as bar council card, certificate e.t.c)</label>
+                <input type="file" name="image" class="form-control-file" id="exampleFormControlFile1">
+               </div>
+               <br>
+               <input type="submit" class="btn btn22" value="submit"> 
+         </form>
 
                 </div>
             </div>

@@ -6,13 +6,14 @@
   $email = $_POST['email'];
   $mobile = $_POST['mobile'];
   $fax = $_POST['fax'];
+  $practice=$_POST['practice'];
   $password = $_POST['password'];
   $image= $_FILES['image'];
   $imagename = $image['name'];
   $tempiamgename = $image['tmp_name'];
 
   move_uploaded_file($tempiamgename,'images/'.$imagename.'');
-  mysqli_query($conn,"insert into lawyer values(null,'$lawyer','$city','$address','$email','$mobile','$fax','$password','$image')");
+  mysqli_query($conn,"insert into lawyer values(null,'$lawyer','$city','$address','$email','$mobile','$fax','$practice','$password','$imagename')");
 
   header('location:lawyer.php');
 ?>

@@ -1,5 +1,4 @@
 <?php
-error_reporting(0);
 $conn = mysqli_connect("localhost","root","","law");
 if ($conn) {
     echo "connection refuse";
@@ -16,18 +15,13 @@ $address =$_POST['address'];
 $email =$_POST['email'];
 $mobile =$_POST['mobile'];
 $fax =$_POST['fax'];
+$practice =$_POST['practice'];
 $password =$_POST['password'];
-
-$query ="UPDATE `lawyer` SET `lawyer`='$lawyer',`city`='$city',`address`='$address',`email`='$email',`mobile`='$mobile',`fax`='$fax',`password`='$password' WHERE   id='$id'";
+$query ="UPDATE `lawyer` SET `lawyer`='$lawyer',`city`='$city',`address`='$address',`email`='$email',`mobile`='$mobile',`fax`='$fax',`practice`='$practice',`password`='$password' WHERE   id='$id'";
 $q =mysqli_query($conn,$query);
-if(!$q){
-    echo "bye";
-}
-else{
-    echo 'hi';
 
     header('location:lawyer.php');
-}
+
 ?>
 
 

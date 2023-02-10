@@ -1,5 +1,6 @@
 <?php
 $conn = mysqli_connect("localhost","root","","law");
+session_start();
 ?>
 <!DOCTYPE php>
 <php lang="en">
@@ -14,10 +15,17 @@ $conn = mysqli_connect("localhost","root","","law");
         <link href="css/styles.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
     </head>
+    <style>
+        .heading{
+            text-align:center;
+            font-family:fantasy;
+            src: url(sansation_bold.woff);
+        }
+    </style>
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3" href="index.php">Lawyer Website</a>
+            <a class="navbar-brand ps-3" href="dashboard.php">Lawyer Website</a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
@@ -41,75 +49,60 @@ $conn = mysqli_connect("localhost","root","","law");
             </ul>
         </nav>
         <div id="layoutSidenav">
-            <div id="layoutSidenav_nav">
+        <div id="layoutSidenav_nav">
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">Core</div>
-                            <a class="nav-link" href="index.php">
+                            <a class="nav-link" href="dashboard.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Dashboard
+                                DASHBOARD
                             </a>
                             <a class="nav-link" href="lawyer.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-vcard"></i></div>
-                               Lawyer
+                               LAWYER
                             </a>
-
-
                             <a class="nav-link" href="client.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
-                               Clients
+                               CLIENTS
                             </a>
-
                             <a class="nav-link" href="service.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                               Services
-                            </a>
+                               SERVICES
                             <a class="nav-link" href="appointment.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-calendar"></i></div>
-                                Appointment
+                                APPOINTMENT
                             </a>
-
-
                             <a class="nav-link" href="testimonial.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-comment"></i></div>
-                                Testimonial
+                                TESTIMONIAL
                             </a>
                             <a class="nav-link" href="contact.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-phone"></i></div>
-                                Contact-Us
+                                CONTACT-US
                             </a>
-
-
                         </div>
                     </div>
                 </nav>
             </div>
-<div id="layoutSidenav_content">
+
+                <div id="layoutSidenav_content">
                 <main>
                 <div class="container-fluid px-4">
-                        <h1 class="mt-4 align-item-center">Appointment</h1>
-                        <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Appointment</li>
-                        </ol>
-                        <div class="card mb-4">
-                        </div>
-                        <a class="btn btn-primary" href="./appointmentadd.php" role="button">New Appointment</a>
-             </div>
+                        <h1 class="mt-4 heading"> <span><i class="fa-regular fa-star"></i></span> Appointment <span><i class="fa-regular fa-star"></i></span></h1>
              <br>
 
-            <div class="card mb-4">
+            <div class="card mb-4" style="border:solid LightGrey 1px;">
                             <div class="card-body">
                                 <table id="datatablesSimple">
                                     <thead>
                                         <tr>
                                         <th>id</th>
-                                            <th>Client Name</th>
-                                            <th>Email</th>
-                                            <th>Date</th>
-                                            <th>Time</th>
-                                            <th>Service</th>
+                                        <th>Client Name</th>
+                                        <th>Email</th>
+                                        <th>Date</th>
+                                        <th>Time</th>
+                                        <th>lawyer</th>
 
                                             <th>Action</th>
                                         </tr>
@@ -124,7 +117,7 @@ $conn = mysqli_connect("localhost","root","","law");
                                             <th>Email</th>
                                             <th>Date</th>
                                             <th>Time</th>
-                                            <th>Service</th>
+                                            <th>lawyer</th>
 
                                             <th>Action</th>
                                         </tr>
@@ -145,7 +138,7 @@ $conn = mysqli_connect("localhost","root","","law");
                     <td><?= $row['email'] ?></td>
                     <td><?= $row['Date'] ?></td>
                    <td><?= $row['Time'] ?></td>
-                    <td><?= $row['Service'] ?></td>
+                    <td><?= $row['lawyer'] ?></td>
                   
                     <!-- <td><img src="images/<?= $row['image'] ?>" width="100px" height="100px" alt=""></td> -->
                     <!-- <td> <a  href ="testmonialedit.php?id= class="btn btn-success">Edit</a></td>  -->

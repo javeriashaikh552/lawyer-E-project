@@ -15,93 +15,72 @@ $conn = mysqli_connect("localhost","root","","law");
         <link href="css/styles.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
     </head>
+    <style>
+    .heading{
+            text-align:center;
+            font-family:fantasy;
+            src: url(sansation_bold.woff);
+        }
+    </style>
+
+
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3" href="index.php">Lawyer Website</a>
+            <a class="navbar-brand ps-3" href="dashboard.php">Lawyer Website</a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
-            <!-- Navbar Search-->
-            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
-                <div class="input-group">
-                    <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
-                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
-                </div>
-            </form>
-            <!-- Navbar-->
-            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#!">Settings</a></li>
-                        <li><a class="dropdown-item" href="#!">Activity Log</a></li>
-                        <li><hr class="dropdown-divider" /></li>
-                        <li><a class="dropdown-item" href="#!">Logout</a></li>
-                    </ul>
-                </li>
-            </ul>
         </nav>
         <div id="layoutSidenav">
-            <div id="layoutSidenav_nav">
+        <div id="layoutSidenav_nav">
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">Core</div>
-                            <a class="nav-link" href="index.php">
+                            <a class="nav-link" href="dashboard.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Dashboard
+                                DASHBOARD
                             </a>
                             <a class="nav-link" href="lawyer.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-vcard"></i></div>
-                               Lawyer
+                               LAWYER
                             </a>
-
-
                             <a class="nav-link" href="client.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
-                               Clients
+                               CLIENTS
                             </a>
-
                             <a class="nav-link" href="service.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                               Services
-                            </a>
+                               SERVICES
                             <a class="nav-link" href="appointment.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-calendar"></i></div>
-                                Appointment
+                                APPOINTMENT
                             </a>
-
-
                             <a class="nav-link" href="testimonial.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-comment"></i></div>
-                                Testimonial
+                                TESTIMONIAL
                             </a>
                             <a class="nav-link" href="contact.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-phone"></i></div>
-                                Contact-Us
+                                CONTACT-US
                             </a>
-
-
                         </div>
                     </div>
                 </nav>
             </div>
-<div id="layoutSidenav_content">
+
+                <div id="layoutSidenav_content">
                 <main>
                 <div class="container-fluid px-4">
-                        <h1 class="mt-4 align-item-center">Testimonial</h1>
-                        <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Testimonial</li>
-                        </ol>
-                        <div class="card mb-4">
+                <h1 class="mt-4 heading"><span><i class="fa-regular fa-star"></i></span> TESTIMONIAL <span><i class="fa-regular fa-star"></i></span></h1>
+                <div class="card mb-4">
                         </div>
-                        <a class="btn btn-primary" href="testimonialadd.php" role="button">Add New</a>
 
              </div>
+
              <br>
 
-            <div class="card mb-4">
+<div class="card mb-4"style="border:solid LightGrey 1px;">
                             <div class="card-body">
                                 <table id="datatablesSimple">
                                     <thead>
@@ -110,7 +89,6 @@ $conn = mysqli_connect("localhost","root","","law");
                                         <th>Name</th>
                                         <th>profession</th>
                                         <th>Description</th>
-                                        <th>Image</th>
                                         <th>Action</th>                                        
                                         </tr>
                                     </thead>
@@ -121,7 +99,6 @@ $conn = mysqli_connect("localhost","root","","law");
                                         <th>Name</th>
                                         <th>profession</th>
                                         <th>Description</th>
-                                        <th>Image</th>
                                         <th>Action</th>                                        
                                         </tr>
                                     </tfoot>
@@ -139,30 +116,25 @@ $conn = mysqli_connect("localhost","root","","law");
                     <td><?= $row['name'] ?></td>
                     <td><?= $row['profession'] ?></td>
                     <td><?= $row['description'] ?></td>
-                    <td><img src="images/<?= $row['image'] ?>" width="100px" height="100px" alt=""></td>
-                    <td> <a  href ="testmonialedit.php?id=<?=$row['id']?>" class="btn btn-success">Edit</a></td> 
                     <td> <a  href ="testimonialremove.php?id=<?=$row['id']?>" class="btn btn-danger">Delete</a></td> 
                 </tr>
     
                 <?php
                    } }
                 ?>
-                                   
-
-                                                 </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-
-
-                   
-                </main>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</main>
                 
             </div>
          
 
         </div> 
+
+
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="js/scripts.js"></script>
