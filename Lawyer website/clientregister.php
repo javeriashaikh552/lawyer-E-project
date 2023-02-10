@@ -6,7 +6,7 @@ $conn = mysqli_connect("localhost","root","","law");
 
 <head>
     <meta charset="utf-8">
-    <title>JUSTICE - Free Lawyer Website Template</title>
+    <title>Lawyer Website - client register</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
@@ -27,6 +27,8 @@ $conn = mysqli_connect("localhost","root","","law");
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+      <!-- icon link -->
+      <link rel="shortcut icon" href="./img/logo.png">
 </head>
 
 <body>
@@ -79,15 +81,15 @@ $conn = mysqli_connect("localhost","root","","law");
                     </button>
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto py-0">
-                            <a href="index.php" class="nav-item nav-link">Home</a>
+                        <a href="index.php" class="nav-item nav-link">Home</a>
                             <a href="service.php" class="nav-item nav-link">Services</a>
                             <a href="team.php" class="nav-item nav-link">Attorneys</a>
                             <a href="about.php" class="nav-item nav-link">About</a>
                             <a href="contact.php" class="nav-item nav-link">Contact</a>
                             <a href="appointment.php" class="nav-item nav-link">Appointment</a>
-                            <a href="register.php" class="nav-item nav-link">Register</a>
+                            <a href="register.php" class="nav-item nav-link active">Register</a>
                             <a href="login.php" class="nav-item nav-link">Login</a>
-                        </div>
+                                                </div>
                         <label for="exampleDataList" class="form-label"></label>
 <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search..." style="width:260px;">
 <datalist id="datalistOptions">
@@ -131,7 +133,7 @@ $conn = mysqli_connect("localhost","root","","law");
                 <div class="col-lg-6 py-5">
                     <div class="rounded p-3 my-3" style="background: rgba(55, 55, 63, .7);">
                         <h4 class="text-center text-white mb-4">Client Registration Form</h4>
-                        <form action="admin/lawyerinsert.php" method="POST">
+                        <form action="loginn.php" method="POST">
                             <!-- NAME -->
                             <div class="form-group ml-3 mr-3">
                                 <input type="text" class="form-control border-0 p-4" name="client" placeholder="Your Name" required="required" />
@@ -172,7 +174,9 @@ $conn = mysqli_connect("localhost","root","","law");
             </div>
         </div>
     </div>
+
     <!-- Registration End -->
+
 
 
 
@@ -185,7 +189,7 @@ $conn = mysqli_connect("localhost","root","","law");
                     <i class="fa fa-2x fa-map-marker-alt text-primary"></i>
                     <div class="ml-3">
                         <h5 class="text-white">Our Office</h5>
-                        <p class="m-0">123 Street, New York, USA</p>
+                        <p class="m-0">Abc street, Xyz Country</p>
                     </div>
                 </div>
             </div>
@@ -213,7 +217,7 @@ $conn = mysqli_connect("localhost","root","","law");
                 <a href="index.php" class="navbar-brand">
                     <h1 class="m-0 mt-n2 display-4 text-primary text-uppercase">Lawyer</h1>
                 </a>
-                <p>Volup amet magna clita tempor. Tempor sea eos vero ipsum. Lorem lorem sit sed elitr sed kasd et</p>
+                <p>Are you looking for a professional help? This website is for you!</p>
                 <div class="d-flex justify-content-start mt-4">
                     <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
                     <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
@@ -224,26 +228,24 @@ $conn = mysqli_connect("localhost","root","","law");
             <div class="col-lg-3 col-md-6 mb-5">
                 <h4 class="font-weight-semi-bold text-primary mb-4">Popular Links</h4>
                 <div class="d-flex flex-column justify-content-start">
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About</a>
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Services</a>
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Attorney</a>
-                    <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Contact</a>
+                    <a class="text-white mb-2" href="index.php"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                    <a class="text-white mb-2" href="about.php"><i class="fa fa-angle-right mr-2"></i>About</a>
+                    <a class="text-white mb-2" href="team.php"><i class="fa fa-angle-right mr-2"></i>Attorney</a>
+                    <a class="text-white" href="contact.php"><i class="fa fa-angle-right mr-2"></i>Contact</a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-5">
                 <h4 class="font-weight-semi-bold text-primary mb-4">Quick Links</h4>
                 <div class="d-flex flex-column justify-content-start">
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>FAQs</a>
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Help</a>
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Terms</a>
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Privacy</a>
-                    <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Site Map</a>
+                    <a class="text-white mb-2" href="about.php"><i class="fa fa-angle-right mr-2"></i>About</a>
+                    <a class="text-white mb-2" href="service.php"><i class="fa fa-angle-right mr-2"></i>Services</a>
+                    <a class="text-white mb-2" href="login.php"><i class="fa fa-angle-right mr-2"></i>login</a>
+                    <a class="text-white mb-2" href="privacy.php"><i class="fa fa-angle-right mr-2"></i>Privacy</a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-5">
                 <h4 class="font-weight-semi-bold text-primary mb-4">Newsletter</h4>
-                <p>Rebum labore lorem dolores kasd est, et ipsum amet et at kasd, ipsum sea tempor magna tempor. Accu kasd sed ea duo ipsum.</p>
+                <p>To stay updated with the latest news and updates , sign up using your email and stay connected with us for more information.</p>
                 <div class="w-100">
                     <div class="input-group">
                         <input type="text" class="form-control border-0" style="padding: 25px;" placeholder="Your Email">
@@ -257,9 +259,6 @@ $conn = mysqli_connect("localhost","root","","law");
         <div class="row p-4 mt-5 mx-0" style="background: rgba(256, 256, 256, .05);">
             <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
                 <p class="m-0 text-white">&copy; <a class="font-weight-bold" href="#">Lawyer Website</a>. All Rights Reserved.</p>
-            </div>
-            <div class="col-md-6 text-center text-md-right">
-                <p class="m-0 text-white">Designed by <a class="font-weight-bold">SYEDA AREEQA</a></p>
             </div>
         </div>
     </div>
@@ -289,3 +288,27 @@ $conn = mysqli_connect("localhost","root","","law");
 </body>
 
 </html>
+<!-- php -->
+<?php 
+error_reporting(0);
+$client = $_POST['client'];
+ $city = $_POST['city'];
+ $address = $_POST['address'];
+ $email = $_POST['email'];
+ $phone = $_POST['phone'];
+ $fax = $_POST['fax'];
+ $password = $_POST['password'];
+
+$conn = mysqli_connect("localhost","root","","law");
+if(!$conn){
+    echo "connection refuse";
+}
+$query ="INSERT INTO `client`(`id`, `client`, `city`, `address`, `email`, `phone`, `fax`, `password`) VALUES ('null','$client','$city','$address','$email','$phone','$fax','$password')";
+
+$q= mysqli_query($conn,$query);
+
+
+header('location:clientregister.php');
+
+
+?>

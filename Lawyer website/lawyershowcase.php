@@ -1,9 +1,13 @@
+<?php
+$conn = mysqli_connect("localhost","root","","law");
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <title>JUSTICE - Free Lawyer Website Template</title>
+    <title>Lawyer Website - login</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
@@ -24,11 +28,47 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+      <!-- icon link -->
+      <link rel="shortcut icon" href="./img/logo.png">
 </head>
+<style>
+/* .im img{
+        margin: 100px;
+    }
+    .im h1{
+        text-align: center;
+        font-variant: small-caps;
+        text-transform: capitalize;
+        color: blue;
+        background-color: lightskyblue;
+    } */
+ 
+    .container img{
+        float: left;
 
+}
+.center{
+    float: right;
+    display: flex;
+     justify-content: right;
+     padding-top: 30px;
+     padding-right: 130px;
+}
+.input{
+    float: right;
+
+  border-radius: 10px;
+  color: white;
+  border:silver solid 2px;
+  background-color: blue;
+}
+.input:hover{
+  cursor: pointer;
+}
+</style>
 <body>
-    <!-- Header Start -->
-    <div class="container-fluid">
+        <!-- Header Start -->
+        <div class="container-fluid">
         <div class="row">
             <div class="col-lg-3 bg-secondary d-none d-lg-block">
                 <a href="index.php" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
@@ -76,7 +116,7 @@
                     </button>
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto py-0">
-                            <a href="index.php" class="nav-item nav-link">Home</a>
+                        <a href="index.php" class="nav-item nav-link active">Home</a>
                             <a href="service.php" class="nav-item nav-link">Services</a>
                             <a href="team.php" class="nav-item nav-link">Attorneys</a>
                             <a href="about.php" class="nav-item nav-link">About</a>
@@ -85,15 +125,6 @@
                             <a href="register.php" class="nav-item nav-link">Register</a>
                             <a href="login.php" class="nav-item nav-link">Login</a>
                         </div>
-                        <label for="exampleDataList" class="form-label"></label>
-<input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search..." style="width:260px;">
-<datalist id="datalistOptions">
-  <option value="San Francisco">
-  <option value="New York">
-  <option value="Seattle">
-  <option value="Los Angeles">
-  <option value="Chicago">
-</datalist>
                     </div>
                 </nav>
             </div>
@@ -101,42 +132,73 @@
     </div>
     <!-- Header End -->
 
-        <!-- Appointment Start -->
-        <div class="container-fluid">
-        <div class="container py-2">
-        <div class="text-center pb-2">
-                <h5 class="text-uppercase mt-4"></h5>
-                <h3 class="mb-3">LAWYER LOGIN</h3>
-            </div>
-<br>
-            <div class="bg-appointment rounded">
-                <div class="row h-100 align-items-center justify-content-center">
-                    <div class="col-lg-6 py-5">
-                        <div class="rounded p-5 my-5" style="background: rgba(55, 55, 63, .7);">
-                            <h1 class="text-center text-white mb-5">LOGIN</h1>
-                            <form>
-                                <div class="form-group">
-                                    <input type="email" class="form-control border-0 p-4" placeholder="Your Email" required="required" />
-                                </div>
-                                <br>
-                                <div class="form-group">
-                                    <input type="text" class="form-control border-0 p-4" placeholder="Your Password" required="required" />
-                                </div>
-                                <br>
-                                <div>
-                                    <button class="btn btn-primary btn-block border-0 py-3" type="submit">Login</button>
-                                </div>
-                                <br>
-                                <a href="register.php" style="text-decoration:none; color:white;">Don't have an account?</a>
-                            </form>
-                        </div>
-                    </div>
+    <!-- Page Header Start -->
+    <div class="container-fluid bg-page-header">
+        <div class="container">
+            <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
+                <h3 class="display-3 text-white text-uppercase">Login</h3>
+                <div class="d-inline-flex text-white">
+                    <p class="m-0 text-uppercase"><a class="text-white" href="">Home</a></p>
+                    <i class="fa fa-angle-double-right pt-1 px-3"></i>
+                    <p class="m-0 text-uppercase">Login</p>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Appointment End -->
+    <!-- Page Header End -->
+<br>
 
+       <div class="container-fluid">
+        
+       <div class="container py-2">
+        <div class="text-center pb-2">
+
+        
+
+      
+
+       <?php
+
+include_once("./admin/include/config.php");
+
+$select = "SELECT * FROM `lawyer`";
+$result = mysqli_query($conn,$select);
+if(mysqli_num_rows($result)){
+    while ($data = mysqli_fetch_array($result)) {
+ 
+?>
+                  
+                    <div class="team-item text-center bg-white rounded overflow-hidden pt-4">
+                            <h5 class="mb-2 px-4">Attorney Name</h5>
+                            <p class="mb-3 px-4">Practice Area</p>
+                            <div class="team-img position-relative">
+                                <img class="img-fluid" src="./admin/images/<?php echo $data[8];?>" width="300px"  alt="">
+                                <div class="team-social">
+                                    <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+
+                        
+                    <?php
+
+                }}
+?>
+
+   
+            
+         <br>
+         <br>
+         
+
+        
+         </div>
+</div>
+       </div>        
 
     <!-- Footer Start -->
     <div class="container-fluid bg-secondary text-white pt-5 px-sm-3 px-md-5" style="margin-top: 90px;">
@@ -146,7 +208,7 @@
                     <i class="fa fa-2x fa-map-marker-alt text-primary"></i>
                     <div class="ml-3">
                         <h5 class="text-white">Our Office</h5>
-                        <p class="m-0">123 Street, New York, USA</p>
+                        <p class="m-0">Abc street, Xyz Country</p>
                     </div>
                 </div>
             </div>
@@ -174,7 +236,7 @@
                 <a href="index.php" class="navbar-brand">
                     <h1 class="m-0 mt-n2 display-4 text-primary text-uppercase">Lawyer</h1>
                 </a>
-                <p>Volup amet magna clita tempor. Tempor sea eos vero ipsum. Lorem lorem sit sed elitr sed kasd et</p>
+                <p>Are you looking for a professional help? This website is for you!</p>
                 <div class="d-flex justify-content-start mt-4">
                     <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
                     <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
@@ -185,26 +247,24 @@
             <div class="col-lg-3 col-md-6 mb-5">
                 <h4 class="font-weight-semi-bold text-primary mb-4">Popular Links</h4>
                 <div class="d-flex flex-column justify-content-start">
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About</a>
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Services</a>
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Attorney</a>
-                    <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Contact</a>
+                    <a class="text-white mb-2" href="index.php"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                    <a class="text-white mb-2" href="about.php"><i class="fa fa-angle-right mr-2"></i>About</a>
+                    <a class="text-white mb-2" href="team.php"><i class="fa fa-angle-right mr-2"></i>Attorney</a>
+                    <a class="text-white" href="contact.php"><i class="fa fa-angle-right mr-2"></i>Contact</a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-5">
                 <h4 class="font-weight-semi-bold text-primary mb-4">Quick Links</h4>
                 <div class="d-flex flex-column justify-content-start">
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>FAQs</a>
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Help</a>
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Terms</a>
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Privacy</a>
-                    <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Site Map</a>
+                    <a class="text-white mb-2" href="about.php"><i class="fa fa-angle-right mr-2"></i>About</a>
+                    <a class="text-white mb-2" href="service.php"><i class="fa fa-angle-right mr-2"></i>Services</a>
+                    <a class="text-white mb-2" href="login.php"><i class="fa fa-angle-right mr-2"></i>login</a>
+                    <a class="text-white mb-2" href="privacy.php"><i class="fa fa-angle-right mr-2"></i>Privacy</a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-5">
                 <h4 class="font-weight-semi-bold text-primary mb-4">Newsletter</h4>
-                <p>Rebum labore lorem dolores kasd est, et ipsum amet et at kasd, ipsum sea tempor magna tempor. Accu kasd sed ea duo ipsum.</p>
+                <p>To stay updated with the latest news and updates , sign up using your email and stay connected with us for more information.</p>
                 <div class="w-100">
                     <div class="input-group">
                         <input type="text" class="form-control border-0" style="padding: 25px;" placeholder="Your Email">
@@ -219,12 +279,10 @@
             <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
                 <p class="m-0 text-white">&copy; <a class="font-weight-bold" href="#">Lawyer Website</a>. All Rights Reserved.</p>
             </div>
-            <div class="col-md-6 text-center text-md-right">
-                <p class="m-0 text-white">Designed by <a class="font-weight-bold">SYEDA AREEQA</a></p>
-            </div>
         </div>
     </div>
     <!-- Footer End -->
+
 
 
     <!-- Back to Top -->
@@ -250,3 +308,5 @@
 </body>
 
 </html>
+
+

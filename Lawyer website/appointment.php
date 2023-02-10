@@ -1,9 +1,14 @@
+<?php
+$conn = mysqli_connect("localhost","root","","law");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <title>JUSTICE - Free Lawyer Website Template</title>
+    <title>Lawyer Website - appointment</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
@@ -24,6 +29,8 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+      <!-- icon link -->
+      <link rel="shortcut icon" href="./img/logo.png">
 </head>
 
 <body>
@@ -76,24 +83,14 @@
                     </button>
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto py-0">
-                            <a href="index.php" class="nav-item nav-link">Home</a>
+                        <a href="index.php" class="nav-item nav-link">Home</a>
                             <a href="service.php" class="nav-item nav-link">Services</a>
                             <a href="team.php" class="nav-item nav-link">Attorneys</a>
                             <a href="about.php" class="nav-item nav-link">About</a>
                             <a href="contact.php" class="nav-item nav-link">Contact</a>
                             <a href="appointment.php" class="nav-item nav-link active">Appointment</a>
                             <a href="register.php" class="nav-item nav-link">Register</a>
-                            <a href="login.php" class="nav-item nav-link">Login</a>
-                        </div>
-                        <label for="exampleDataList" class="form-label"></label>
-<input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search..." style="width:260px;">
-<datalist id="datalistOptions">
-  <option value="San Francisco">
-  <option value="New York">
-  <option value="Seattle">
-  <option value="Los Angeles">
-  <option value="Chicago">
-</datalist>
+                            <a href="login.php" class="nav-item nav-link">Login</a>                        </div>
                     </div>
                 </nav>
             </div>
@@ -123,7 +120,7 @@
                     <div class="col-lg-6 py-5">
                         <div class="rounded p-5 my-5" style="background: rgba(55, 55, 63, .7);">
                             <h1 class="text-center text-white mb-4">Get An Appointment</h1>
-                            <form action="appointment.php" method="post">
+                            <form action="#" method="post">
                                 <div class="form-group">
                                     <input type="text" name ="txtname" class="form-control border-0 p-4" placeholder="Your Name" required="required" />
                                 </div>
@@ -134,7 +131,7 @@
                                     <div class="col-6">
                                         <div class="form-group">
                                             <div class="Date" id="Date" data-target-input="nearest">
-                                                <input type="Date" name ="txtDate" class="form-control border-0 p-4 datetimepicker-input" placeholder="Select Date" data-target="#Date" data-toggle="datetimepicker"/>
+                                                <input type="date" name="Date" class="form-control border-0 p-4 datetimepicker-input" placeholder="Select Date" data-target="#Date" data-toggle="datetimepicker"/>
                                             </div>
                                         </div>
                                     </div>
@@ -147,18 +144,28 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <select name="txtService" class="custom-select border-0 px-4" style="height: 47px;">
+                                    <select name="laywer" class="custom-select border-0 px-4" style="height: 47px;">
                                         <option selected>Select A Lawyer</option>
-                                        <option selected>Civil</option>
-                                        <option selected>Affidavit</option>
-                                        <option selected>Divorce</option>
-                                        <option selected>Criminal</option>
+                                        <?php
+                                                $select = "SELECT * FROM `lawyer`";
+                                                $rst  = mysqli_query($conn,$select);
+                                                if(mysqli_num_rows($rst)){
+                                                    while($row = mysqli_fetch_array($rst)){
+                                                        ?>
+                                        <option value="<?php echo $row[0];?>"><?php echo $row[1];?></option>
+
+                                                        <?php
+                                                    }
+                                                }
+                                        ?>
+
+
                                     </select>
                                 
                                 
                                         </div>  
                                         <div>
-                                    <button class="btn btn-primary btn-block border-0 py-3"href="./login.html" type="submit">Get An Appointment</button>
+                                    <button class="btn btn-primary btn-block border-0 py-3" name="submit" type="submit">Get An Appointment</button>
                                 </div>
                             </form>
                         </div>
@@ -168,33 +175,28 @@
         </div>
     </div>
     <?php 
-error_reporting(0);
+  if(isset($_POST["submit"])){
+      
 $name=$_POST['txtname'];
 $email=$_POST['txtemail'];
-$Date=$_POST['txtDate'];
+$Date=$_POST['Date'];
 $Time=$_POST['txtTime'];
-$Service=$_POST['txtService'];
+$laywer=$_POST['laywer'];
 
 
-$conn = mysqli_connect("localhost","root","","law");
-if(!$conn){
-    echo "connection refuse";
-}
 
-$query ="INSERT INTO `appointment`(`id`,`name`,`email`,`Date`,`Time`,`Service`,`image`) VALUES ('null','$name','$email','$Date','$Time','$Service','$image')";
+$query ="INSERT INTO `appointment`(`id`, `name`, `email`, `Date`, `Time`, `lawyer`) VALUES (Null,'$name','$email','$Date','$Time','$laywer')";
 
-$q= mysqli_query($conn,$query);
+mysqli_query($conn,$query);
+
+?>
+<script>
+    alert("Appointment Book Success!");
+</script>
+<?php
 
 
-if(!$q){
-    // echo "query not exectired!";
-}
-else{
-    // echo "query sucess!";
-
-}
-header('location:appointment.php');
-
+  }
 
 ?>
     <!-- Appointment End -->
@@ -208,7 +210,7 @@ header('location:appointment.php');
                     <i class="fa fa-2x fa-map-marker-alt text-primary"></i>
                     <div class="ml-3">
                         <h5 class="text-white">Our Office</h5>
-                        <p class="m-0">123 Street, New York, USA</p>
+                        <p class="m-0">Abc street, Xyz Country</p>
                     </div>
                 </div>
             </div>
@@ -236,7 +238,7 @@ header('location:appointment.php');
                 <a href="index.php" class="navbar-brand">
                     <h1 class="m-0 mt-n2 display-4 text-primary text-uppercase">Lawyer</h1>
                 </a>
-                <p>Volup amet magna clita tempor. Tempor sea eos vero ipsum. Lorem lorem sit sed elitr sed kasd et</p>
+                <p>Are you looking for a professional help? This website is for you!</p>
                 <div class="d-flex justify-content-start mt-4">
                     <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
                     <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
@@ -247,26 +249,24 @@ header('location:appointment.php');
             <div class="col-lg-3 col-md-6 mb-5">
                 <h4 class="font-weight-semi-bold text-primary mb-4">Popular Links</h4>
                 <div class="d-flex flex-column justify-content-start">
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About</a>
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Services</a>
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Attorney</a>
-                    <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Contact</a>
+                    <a class="text-white mb-2" href="index.php"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                    <a class="text-white mb-2" href="about.php"><i class="fa fa-angle-right mr-2"></i>About</a>
+                    <a class="text-white mb-2" href="team.php"><i class="fa fa-angle-right mr-2"></i>Attorney</a>
+                    <a class="text-white" href="contact.php"><i class="fa fa-angle-right mr-2"></i>Contact</a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-5">
                 <h4 class="font-weight-semi-bold text-primary mb-4">Quick Links</h4>
                 <div class="d-flex flex-column justify-content-start">
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>FAQs</a>
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Help</a>
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Terms</a>
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Privacy</a>
-                    <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Site Map</a>
+                    <a class="text-white mb-2" href="about.php"><i class="fa fa-angle-right mr-2"></i>About</a>
+                    <a class="text-white mb-2" href="service.php"><i class="fa fa-angle-right mr-2"></i>Services</a>
+                    <a class="text-white mb-2" href="login.php"><i class="fa fa-angle-right mr-2"></i>login</a>
+                    <a class="text-white mb-2" href="privacy.php"><i class="fa fa-angle-right mr-2"></i>Privacy</a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-5">
                 <h4 class="font-weight-semi-bold text-primary mb-4">Newsletter</h4>
-                <p>Rebum labore lorem dolores kasd est, et ipsum amet et at kasd, ipsum sea tempor magna tempor. Accu kasd sed ea duo ipsum.</p>
+                <p>To stay updated with the latest news and updates , sign up using your email and stay connected with us for more information.</p>
                 <div class="w-100">
                     <div class="input-group">
                         <input type="text" class="form-control border-0" style="padding: 25px;" placeholder="Your Email">
@@ -280,9 +280,6 @@ header('location:appointment.php');
         <div class="row p-4 mt-5 mx-0" style="background: rgba(256, 256, 256, .05);">
             <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
                 <p class="m-0 text-white">&copy; <a class="font-weight-bold" href="#">Lawyer Website</a>. All Rights Reserved.</p>
-            </div>
-            <div class="col-md-6 text-center text-md-right">
-                <p class="m-0 text-white">Designed by <a class="font-weight-bold">SYEDA AREEQA</a></p>
             </div>
         </div>
     </div>
